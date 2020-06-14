@@ -1,0 +1,384 @@
+webpackHotUpdate('static\\development\\pages\\contact.js', {
+  /***/ './pages/contact.tsx':
+    /*!***************************!*\
+  !*** ./pages/contact.tsx ***!
+  \***************************/
+    /*! exports provided: default */
+    /***/ function (module, __webpack_exports__, __webpack_require__) {
+      'use strict';
+      __webpack_require__.r(__webpack_exports__);
+      /* WEBPACK VAR INJECTION */ (function (module) {
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! react */ './node_modules/react/index.js'
+        );
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
+          react__WEBPACK_IMPORTED_MODULE_0__
+        );
+        /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+          /*! next/head */ './node_modules/next/dist/next-server/lib/head.js'
+        );
+        /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/ __webpack_require__.n(
+          next_head__WEBPACK_IMPORTED_MODULE_1__
+        );
+        /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+          /*! styled-components */ './node_modules/styled-components/dist/styled-components.browser.esm.js'
+        );
+        /* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+          /*! polished */ './node_modules/polished/dist/polished.esm.js'
+        );
+        /* harmony import */ var components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+          /*! components */ './components/index.ts'
+        );
+        var _jsxFileName = 'F:\\Projects\\nidratech.com\\pages\\contact.tsx',
+          _s = $RefreshSig$();
+
+        var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+        function Contact() {
+          _s();
+
+          var email = Object(react__WEBPACK_IMPORTED_MODULE_0__['useRef'])();
+          var message = Object(react__WEBPACK_IMPORTED_MODULE_0__['useRef'])();
+          return __jsx(
+            components__WEBPACK_IMPORTED_MODULE_4__['Container'],
+            {
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 13,
+                columnNumber: 5,
+              },
+            },
+            __jsx(
+              next_head__WEBPACK_IMPORTED_MODULE_1___default.a,
+              {
+                __self: this,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 14,
+                  columnNumber: 7,
+                },
+              },
+              __jsx(
+                'title',
+                {
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 15,
+                    columnNumber: 9,
+                  },
+                },
+                'Contact Us'
+              )
+            ),
+            __jsx(
+              TitleContainer,
+              {
+                __self: this,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 18,
+                  columnNumber: 7,
+                },
+              },
+              __jsx(
+                Title,
+                {
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 19,
+                    columnNumber: 9,
+                  },
+                },
+                "We'd love to hear from you"
+              ),
+              __jsx(components__WEBPACK_IMPORTED_MODULE_4__['HighlightLine'], {
+                __self: this,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 20,
+                  columnNumber: 9,
+                },
+              })
+            ),
+            __jsx(
+              'form',
+              {
+                action: 'https://formspree.io/contact@nidratech.com',
+                method: 'POST',
+                __self: this,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 23,
+                  columnNumber: 7,
+                },
+              },
+              __jsx(
+                FormGroup,
+                {
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 24,
+                    columnNumber: 9,
+                  },
+                },
+                __jsx(
+                  FormLabel,
+                  {
+                    htmlFor: 'email',
+                    __self: this,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 25,
+                      columnNumber: 11,
+                    },
+                  },
+                  'Email'
+                ),
+                __jsx(EmailInput, {
+                  id: 'email',
+                  name: 'email',
+                  type: 'email',
+                  ref: email,
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 26,
+                    columnNumber: 11,
+                  },
+                })
+              ),
+              __jsx(
+                FormGroup,
+                {
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 29,
+                    columnNumber: 9,
+                  },
+                },
+                __jsx(
+                  FormLabel,
+                  {
+                    htmlFor: 'message',
+                    __self: this,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 30,
+                      columnNumber: 11,
+                    },
+                  },
+                  'Message'
+                ),
+                __jsx(MessageInput, {
+                  id: 'message',
+                  name: 'message',
+                  rows: 3,
+                  ref: message,
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 31,
+                    columnNumber: 11,
+                  },
+                })
+              ),
+              __jsx('input', {
+                type: 'hidden',
+                name: '_next',
+                value: 'https://www.nidratech.com/success',
+                __self: this,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 34,
+                  columnNumber: 9,
+                },
+              }),
+              __jsx(
+                components__WEBPACK_IMPORTED_MODULE_4__['Button'],
+                {
+                  disabled: !email.current.value || !message.current.value,
+                  type: 'submit',
+                  __self: this,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 36,
+                    columnNumber: 9,
+                  },
+                },
+                'Submit'
+              )
+            )
+          );
+        }
+
+        _s(Contact, 'kP1xJLjujzLdpRK1KVDJJcL0bus=');
+
+        _c = Contact;
+        var formControl = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__['css'])(
+          [
+            'display:block;width:100%;height:calc(1.5em + 0.75rem + 2px);padding:0.375rem 0.75rem;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:0.25rem;transition:border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;:focus{color:#495057;background-color:#fff;border-color:',
+            ';outline:0;box-shadow:0 0 0 0.1rem ',
+            ';}',
+          ],
+          function (_ref) {
+            var theme = _ref.theme;
+            return Object(polished__WEBPACK_IMPORTED_MODULE_3__['lighten'])(
+              0.3,
+              theme.colors.brand
+            );
+          },
+          function (_ref2) {
+            var theme = _ref2.theme;
+            return Object(polished__WEBPACK_IMPORTED_MODULE_3__['lighten'])(
+              0.3,
+              theme.colors.brand
+            );
+          }
+        );
+        var FormLabel = styled_components__WEBPACK_IMPORTED_MODULE_2__['default'].label.withConfig({
+          displayName: 'FormLabel',
+          componentId: 'g7i81g-0',
+        })(
+          ['display:block;margin-bottom:', ';margin-top:', ';'],
+          function (_ref3) {
+            var theme = _ref3.theme;
+            return theme.spacing.medium;
+          },
+          function (_ref4) {
+            var theme = _ref4.theme;
+            return theme.spacing.small;
+          }
+        );
+        _c2 = FormLabel;
+        var MessageInput = styled_components__WEBPACK_IMPORTED_MODULE_2__[
+          'default'
+        ].textarea.withConfig({
+          displayName: 'MessageInput',
+          componentId: 'g7i81g-1',
+        })(['', ' height:auto;'], formControl);
+        _c3 = MessageInput;
+        var EmailInput = styled_components__WEBPACK_IMPORTED_MODULE_2__['default'].input.withConfig(
+          {
+            displayName: 'EmailInput',
+            componentId: 'g7i81g-2',
+          }
+        )(['', ''], formControl);
+        _c4 = EmailInput;
+        var FormGroup = styled_components__WEBPACK_IMPORTED_MODULE_2__['default'].div.withConfig({
+          displayName: 'FormGroup',
+          componentId: 'g7i81g-3',
+        })(['margin-bottom:', ';'], function (_ref5) {
+          var theme = _ref5.theme;
+          return theme.spacing.medium;
+        });
+        _c5 = FormGroup;
+        var Title = styled_components__WEBPACK_IMPORTED_MODULE_2__['default'].h1.withConfig({
+          displayName: 'Title',
+          componentId: 'g7i81g-4',
+        })(['text-transform:uppercase;font-weight:700;font-size:', ';'], function (_ref6) {
+          var theme = _ref6.theme;
+          return theme.fontSize.mediumLarge;
+        });
+        _c6 = Title;
+        var TitleContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__[
+          'default'
+        ].div.withConfig({
+          displayName: 'TitleContainer',
+          componentId: 'g7i81g-5',
+        })(['display:inline-block;margin-bottom:', ';'], function (_ref7) {
+          var theme = _ref7.theme;
+          return theme.spacing.medium;
+        });
+        _c7 = TitleContainer;
+        /* harmony default export */ __webpack_exports__['default'] = Contact;
+
+        var _c, _c2, _c3, _c4, _c5, _c6, _c7;
+
+        $RefreshReg$(_c, 'Contact');
+        $RefreshReg$(_c2, 'FormLabel');
+        $RefreshReg$(_c3, 'MessageInput');
+        $RefreshReg$(_c4, 'EmailInput');
+        $RefreshReg$(_c5, 'FormGroup');
+        $RefreshReg$(_c6, 'Title');
+        $RefreshReg$(_c7, 'TitleContainer');
+
+        var _a, _b;
+        // Legacy CSS implementations will `eval` browser code in a Node.js context
+        // to extract CSS. For backwards compatibility, we need to check we're in a
+        // browser context before continuing.
+        if (
+          typeof self !== 'undefined' &&
+          // AMP / No-JS mode does not inject these helpers:
+          '$RefreshHelpers$' in self
+        ) {
+          var currentExports_1 = module.__proto__.exports;
+          var prevExports =
+            (_b = (_a = module.hot.data) === null || _a === void 0 ? void 0 : _a.prevExports) !==
+              null && _b !== void 0
+              ? _b
+              : null;
+          // This cannot happen in MainTemplate because the exports mismatch between
+          // templating and execution.
+          self.$RefreshHelpers$.registerExportsForReactRefresh(currentExports_1, module.i);
+          // A module can be accepted automatically based on its exports, e.g. when
+          // it is a Refresh Boundary.
+          if (self.$RefreshHelpers$.isReactRefreshBoundary(currentExports_1)) {
+            // Save the previous exports on update so we can compare the boundary
+            // signatures.
+            module.hot.dispose(function (data) {
+              data.prevExports = currentExports_1;
+            });
+            // Unconditionally accept an update to this module, we'll check if it's
+            // still a Refresh Boundary later.
+            module.hot.accept();
+            // This field is set when the previous version of this module was a
+            // Refresh Boundary, letting us know we need to check for invalidation or
+            // enqueue an update.
+            if (prevExports !== null) {
+              // A boundary can become ineligible if its exports are incompatible
+              // with the previous exports.
+              //
+              // For example, if you add/remove/change exports, we'll want to
+              // re-execute the importing modules, and force those components to
+              // re-render. Similarly, if you convert a class component to a
+              // function, we want to invalidate the boundary.
+              if (
+                self.$RefreshHelpers$.shouldInvalidateReactRefreshBoundary(
+                  prevExports,
+                  currentExports_1
+                )
+              ) {
+                module.hot.invalidate();
+              } else {
+                self.$RefreshHelpers$.scheduleUpdate();
+              }
+            }
+          } else {
+            // Since we just executed the code for the module, it's possible that the
+            // new exports made it ineligible for being a boundary.
+            // We only care about the case when we were _previously_ a boundary,
+            // because we already accepted this update (accidental side effect).
+            var isNoLongerABoundary = prevExports !== null;
+            if (isNoLongerABoundary) {
+              module.hot.invalidate();
+            }
+          }
+        }
+
+        /* WEBPACK VAR INJECTION */
+      }.call(
+        this,
+        __webpack_require__(
+          /*! ./../node_modules/webpack/buildin/harmony-module.js */ './node_modules/webpack/buildin/harmony-module.js'
+        )(module)
+      ));
+
+      /***/
+    },
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wYWdlcy9jb250YWN0LnRzeCJdLCJuYW1lcyI6WyJDb250YWN0IiwiZW1haWwiLCJ1c2VSZWYiLCJtZXNzYWdlIiwiY3VycmVudCIsInZhbHVlIiwiZm9ybUNvbnRyb2wiLCJjc3MiLCJ0aGVtZSIsImxpZ2h0ZW4iLCJjb2xvcnMiLCJicmFuZCIsIkZvcm1MYWJlbCIsInN0eWxlZCIsImxhYmVsIiwic3BhY2luZyIsIm1lZGl1bSIsInNtYWxsIiwiTWVzc2FnZUlucHV0IiwidGV4dGFyZWEiLCJFbWFpbElucHV0IiwiaW5wdXQiLCJGb3JtR3JvdXAiLCJkaXYiLCJUaXRsZSIsImgxIiwiZm9udFNpemUiLCJtZWRpdW1MYXJnZSIsIlRpdGxlQ29udGFpbmVyIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7O0FBRUEsU0FBU0EsT0FBVCxHQUFtQjtBQUFBOztBQUNqQixNQUFNQyxLQUFLLEdBQUdDLG9EQUFNLEVBQXBCO0FBQ0EsTUFBTUMsT0FBTyxHQUFHRCxvREFBTSxFQUF0QjtBQUVBLFNBQ0UsTUFBQyxvREFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBQ0UsTUFBQyxnREFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBQ0U7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQkFERixDQURGLEVBS0UsTUFBQyxjQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsS0FDRSxNQUFDLEtBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxrQ0FERixFQUVFLE1BQUMsd0RBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQUZGLENBTEYsRUFVRTtBQUFNLFVBQU0sRUFBQyw0Q0FBYjtBQUEwRCxVQUFNLEVBQUMsTUFBakU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQUNFLE1BQUMsU0FBRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBQ0UsTUFBQyxTQUFEO0FBQVcsV0FBTyxFQUFDLE9BQW5CO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFERixFQUVFLE1BQUMsVUFBRDtBQUFZLE1BQUUsRUFBQyxPQUFmO0FBQXVCLFFBQUksRUFBQyxPQUE1QjtBQUFvQyxRQUFJLEVBQUMsT0FBekM7QUFBaUQsT0FBRyxFQUFFRCxLQUF0RDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBRkYsQ0FERixFQU1FLE1BQUMsU0FBRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBQ0UsTUFBQyxTQUFEO0FBQVcsV0FBTyxFQUFDLFNBQW5CO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFERixFQUVFLE1BQUMsWUFBRDtBQUFjLE1BQUUsRUFBQyxTQUFqQjtBQUEyQixRQUFJLEVBQUMsU0FBaEM7QUFBMEMsUUFBSSxFQUFFLENBQWhEO0FBQW1ELE9BQUcsRUFBRUUsT0FBeEQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQUZGLENBTkYsRUFXRTtBQUFPLFFBQUksRUFBQyxRQUFaO0FBQXFCLFFBQUksRUFBQyxPQUExQjtBQUFrQyxTQUFLLEVBQUMsbUNBQXhDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFYRixFQWFFLE1BQUMsaURBQUQ7QUFBUSxZQUFRLEVBQUUsQ0FBQ0YsS0FBSyxDQUFDRyxPQUFOLENBQWNDLEtBQWYsSUFBd0IsQ0FBQ0YsT0FBTyxDQUFDQyxPQUFSLENBQWdCQyxLQUEzRDtBQUFrRSxRQUFJLEVBQUMsUUFBdkU7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxjQWJGLENBVkYsQ0FERjtBQThCRDs7R0FsQ1FMLE87O0tBQUFBLE87QUFvQ1QsSUFBTU0sV0FBVyxHQUFHQyw2REFBSCx1WUFnQkc7QUFBQSxNQUFHQyxLQUFILFFBQUdBLEtBQUg7QUFBQSxTQUFlQyx3REFBTyxDQUFDLEdBQUQsRUFBTUQsS0FBSyxDQUFDRSxNQUFOLENBQWFDLEtBQW5CLENBQXRCO0FBQUEsQ0FoQkgsRUFrQmM7QUFBQSxNQUFHSCxLQUFILFNBQUdBLEtBQUg7QUFBQSxTQUFlQyx3REFBTyxDQUFDLEdBQUQsRUFBTUQsS0FBSyxDQUFDRSxNQUFOLENBQWFDLEtBQW5CLENBQXRCO0FBQUEsQ0FsQmQsQ0FBakI7QUFxQkEsSUFBTUMsU0FBUyxHQUFHQyx5REFBTSxDQUFDQyxLQUFWO0FBQUE7QUFBQTtBQUFBLDBEQUVJO0FBQUEsTUFBR04sS0FBSCxTQUFHQSxLQUFIO0FBQUEsU0FBZUEsS0FBSyxDQUFDTyxPQUFOLENBQWNDLE1BQTdCO0FBQUEsQ0FGSixFQUdDO0FBQUEsTUFBR1IsS0FBSCxTQUFHQSxLQUFIO0FBQUEsU0FBZUEsS0FBSyxDQUFDTyxPQUFOLENBQWNFLEtBQTdCO0FBQUEsQ0FIRCxDQUFmO01BQU1MLFM7QUFLTixJQUFNTSxZQUFZLEdBQUdMLHlEQUFNLENBQUNNLFFBQVY7QUFBQTtBQUFBO0FBQUEsMEJBQ2RiLFdBRGMsQ0FBbEI7TUFBTVksWTtBQUlOLElBQU1FLFVBQVUsR0FBR1AseURBQU0sQ0FBQ1EsS0FBVjtBQUFBO0FBQUE7QUFBQSxhQUNaZixXQURZLENBQWhCO01BQU1jLFU7QUFHTixJQUFNRSxTQUFTLEdBQUdULHlEQUFNLENBQUNVLEdBQVY7QUFBQTtBQUFBO0FBQUEsNEJBQ0k7QUFBQSxNQUFHZixLQUFILFNBQUdBLEtBQUg7QUFBQSxTQUFlQSxLQUFLLENBQUNPLE9BQU4sQ0FBY0MsTUFBN0I7QUFBQSxDQURKLENBQWY7TUFBTU0sUztBQUdOLElBQU1FLEtBQUssR0FBR1gseURBQU0sQ0FBQ1ksRUFBVjtBQUFBO0FBQUE7QUFBQSxpRUFHSTtBQUFBLE1BQUdqQixLQUFILFNBQUdBLEtBQUg7QUFBQSxTQUFlQSxLQUFLLENBQUNrQixRQUFOLENBQWVDLFdBQTlCO0FBQUEsQ0FISixDQUFYO01BQU1ILEs7QUFLTixJQUFNSSxjQUFjLEdBQUdmLHlEQUFNLENBQUNVLEdBQVY7QUFBQTtBQUFBO0FBQUEsaURBRUQ7QUFBQSxNQUFHZixLQUFILFNBQUdBLEtBQUg7QUFBQSxTQUFlQSxLQUFLLENBQUNPLE9BQU4sQ0FBY0MsTUFBN0I7QUFBQSxDQUZDLENBQXBCO01BQU1ZLGM7QUFLUzVCLHNFQUFmIiwiZmlsZSI6InN0YXRpYy93ZWJwYWNrL3N0YXRpY1xcZGV2ZWxvcG1lbnRcXHBhZ2VzXFxjb250YWN0LmpzLjY3NWQ5NzNlZWRlMWVhMjJjYjUwLmhvdC11cGRhdGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VSZWYgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnO1xuaW1wb3J0IHN0eWxlZCwgeyBjc3MgfSBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5pbXBvcnQgeyBsaWdodGVuIH0gZnJvbSAncG9saXNoZWQnO1xuXG5pbXBvcnQgeyBCdXR0b24sIENvbnRhaW5lciwgSGlnaGxpZ2h0TGluZSB9IGZyb20gJ2NvbXBvbmVudHMnO1xuXG5mdW5jdGlvbiBDb250YWN0KCkge1xuICBjb25zdCBlbWFpbCA9IHVzZVJlZigpO1xuICBjb25zdCBtZXNzYWdlID0gdXNlUmVmKCk7XG5cbiAgcmV0dXJuIChcbiAgICA8Q29udGFpbmVyPlxuICAgICAgPEhlYWQ+XG4gICAgICAgIDx0aXRsZT5Db250YWN0IFVzPC90aXRsZT5cbiAgICAgIDwvSGVhZD5cblxuICAgICAgPFRpdGxlQ29udGFpbmVyPlxuICAgICAgICA8VGl0bGU+V2UmYXBvcztkIGxvdmUgdG8gaGVhciBmcm9tIHlvdTwvVGl0bGU+XG4gICAgICAgIDxIaWdobGlnaHRMaW5lIC8+XG4gICAgICA8L1RpdGxlQ29udGFpbmVyPlxuXG4gICAgICA8Zm9ybSBhY3Rpb249XCJodHRwczovL2Zvcm1zcHJlZS5pby9jb250YWN0QG5pZHJhdGVjaC5jb21cIiBtZXRob2Q9XCJQT1NUXCI+XG4gICAgICAgIDxGb3JtR3JvdXA+XG4gICAgICAgICAgPEZvcm1MYWJlbCBodG1sRm9yPVwiZW1haWxcIj5FbWFpbDwvRm9ybUxhYmVsPlxuICAgICAgICAgIDxFbWFpbElucHV0IGlkPVwiZW1haWxcIiBuYW1lPVwiZW1haWxcIiB0eXBlPVwiZW1haWxcIiByZWY9e2VtYWlsfSAvPlxuICAgICAgICA8L0Zvcm1Hcm91cD5cblxuICAgICAgICA8Rm9ybUdyb3VwPlxuICAgICAgICAgIDxGb3JtTGFiZWwgaHRtbEZvcj1cIm1lc3NhZ2VcIj5NZXNzYWdlPC9Gb3JtTGFiZWw+XG4gICAgICAgICAgPE1lc3NhZ2VJbnB1dCBpZD1cIm1lc3NhZ2VcIiBuYW1lPVwibWVzc2FnZVwiIHJvd3M9ezN9IHJlZj17bWVzc2FnZX0gLz5cbiAgICAgICAgPC9Gb3JtR3JvdXA+XG5cbiAgICAgICAgPGlucHV0IHR5cGU9XCJoaWRkZW5cIiBuYW1lPVwiX25leHRcIiB2YWx1ZT1cImh0dHBzOi8vd3d3Lm5pZHJhdGVjaC5jb20vc3VjY2Vzc1wiIC8+XG5cbiAgICAgICAgPEJ1dHRvbiBkaXNhYmxlZD17IWVtYWlsLmN1cnJlbnQudmFsdWUgfHwgIW1lc3NhZ2UuY3VycmVudC52YWx1ZX0gdHlwZT1cInN1Ym1pdFwiPlxuICAgICAgICAgIFN1Ym1pdFxuICAgICAgICA8L0J1dHRvbj5cbiAgICAgIDwvZm9ybT5cbiAgICA8L0NvbnRhaW5lcj5cbiAgKTtcbn1cblxuY29uc3QgZm9ybUNvbnRyb2wgPSBjc3NgXG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiBjYWxjKDEuNWVtICsgMC43NXJlbSArIDJweCk7XG4gIHBhZGRpbmc6IDAuMzc1cmVtIDAuNzVyZW07XG4gIGxpbmUtaGVpZ2h0OiAxLjU7XG4gIGNvbG9yOiAjNDk1MDU3O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBiYWNrZ3JvdW5kLWNsaXA6IHBhZGRpbmctYm94O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2VkNGRhO1xuICBib3JkZXItcmFkaXVzOiAwLjI1cmVtO1xuICB0cmFuc2l0aW9uOiBib3JkZXItY29sb3IgMC4xNXMgZWFzZS1pbi1vdXQsIGJveC1zaGFkb3cgMC4xNXMgZWFzZS1pbi1vdXQ7XG5cbiAgOmZvY3VzIHtcbiAgICBjb2xvcjogIzQ5NTA1NztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICAgIGJvcmRlci1jb2xvcjogJHsoeyB0aGVtZSB9KSA9PiBsaWdodGVuKDAuMywgdGhlbWUuY29sb3JzLmJyYW5kKX07XG4gICAgb3V0bGluZTogMDtcbiAgICBib3gtc2hhZG93OiAwIDAgMCAwLjFyZW0gJHsoeyB0aGVtZSB9KSA9PiBsaWdodGVuKDAuMywgdGhlbWUuY29sb3JzLmJyYW5kKX07XG4gIH1cbmA7XG5jb25zdCBGb3JtTGFiZWwgPSBzdHlsZWQubGFiZWxgXG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tYm90dG9tOiAkeyh7IHRoZW1lIH0pID0+IHRoZW1lLnNwYWNpbmcubWVkaXVtfTtcbiAgbWFyZ2luLXRvcDogJHsoeyB0aGVtZSB9KSA9PiB0aGVtZS5zcGFjaW5nLnNtYWxsfTtcbmA7XG5jb25zdCBNZXNzYWdlSW5wdXQgPSBzdHlsZWQudGV4dGFyZWFgXG4gICR7Zm9ybUNvbnRyb2x9XG4gIGhlaWdodDogYXV0bztcbmA7XG5jb25zdCBFbWFpbElucHV0ID0gc3R5bGVkLmlucHV0YFxuICAke2Zvcm1Db250cm9sfVxuYDtcbmNvbnN0IEZvcm1Hcm91cCA9IHN0eWxlZC5kaXZgXG4gIG1hcmdpbi1ib3R0b206ICR7KHsgdGhlbWUgfSkgPT4gdGhlbWUuc3BhY2luZy5tZWRpdW19O1xuYDtcbmNvbnN0IFRpdGxlID0gc3R5bGVkLmgxYFxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBmb250LXdlaWdodDogNzAwO1xuICBmb250LXNpemU6ICR7KHsgdGhlbWUgfSkgPT4gdGhlbWUuZm9udFNpemUubWVkaXVtTGFyZ2V9O1xuYDtcbmNvbnN0IFRpdGxlQ29udGFpbmVyID0gc3R5bGVkLmRpdmBcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBtYXJnaW4tYm90dG9tOiAkeyh7IHRoZW1lIH0pID0+IHRoZW1lLnNwYWNpbmcubWVkaXVtfTtcbmA7XG5cbmV4cG9ydCBkZWZhdWx0IENvbnRhY3Q7XG4iXSwic291cmNlUm9vdCI6IiJ9
