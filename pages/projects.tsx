@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import Head from 'next/head';
+
+import { Container } from 'components';
 
 function Projects() {
   return (
-    <div>
+    <Container>
       <Head>
-        <title>Nidratech Ltd. - Projects</title>
+        <title>Projects</title>
       </Head>
-    </div>
+    </Container>
   );
 }
 

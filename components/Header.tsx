@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { useRouter } from 'next/router';
 
 import NidratechLogo from 'components/NidratechLogo';
 
-const year = new Date().getFullYear();
-
 function Header() {
+  const { pathname } = useRouter();
+
   return (
     <StyledHeader>
       <StyledNav>
@@ -20,25 +21,25 @@ function Header() {
 
         <NavContainer>
           <Link href={'/'} passHref>
-            <NavItem as="a" title={'Home'}>
+            <NavItem as="a" title={'Home'} isActive={pathname === '/'}>
               Home
             </NavItem>
           </Link>
 
           <Link href={'/projects'} passHref>
-            <NavItem as="a" title={'Projects'}>
+            <NavItem as="a" title={'Projects'} isActive={pathname === '/projects'}>
               Projects
             </NavItem>
           </Link>
 
           <Link href={'/clients'} passHref>
-            <NavItem as="a" title={'Clients'}>
+            <NavItem as="a" title={'Clients'} isActive={pathname === '/clients'}>
               Clients
             </NavItem>
           </Link>
 
           <Link href={'/contact'} passHref>
-            <NavItem as="a" title={'Contact us'}>
+            <NavItem as="a" title={'Contact us'} isActive={pathname === '/contact'}>
               Contact us
             </NavItem>
           </Link>
@@ -50,17 +51,20 @@ function Header() {
 
 const StyledNidratechLogo = styled(NidratechLogo)`
   width: 9.5rem;
+  height: 100%;
 `;
 const NavContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-const NavItem = styled.a`
+const NavItem = styled.a<{ isActive?: boolean }>`
   display: flex;
   padding: 0 ${({ theme }) => theme.spacing.medium};
-  color: ${({ theme }) => theme.colors.brand};
+  color: ${({ isActive, theme }) => (isActive ? theme.colors.brand : theme.colors.grey)};
+
   :hover {
-    color: ${({ theme }) => darken(0.1, theme.colors.brand)};
+    color: ${({ isActive, theme }) =>
+      darken(0.05, isActive ? theme.colors.brand : theme.colors.grey)};
   }
 `;
 const StyledNav = styled.nav`
@@ -78,7 +82,6 @@ const StyledHeader = styled.header`
   z-index: 99;
   background: ${({ theme }) => theme.colors.white};
   height: ${({ theme }) => theme.spacing.navBarHeight};
-  box-shadow: inset 0 -1px 0 0 ${({ theme }) => theme.colors.greyLight};
 `;
 
 export default Header;

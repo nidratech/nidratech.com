@@ -32,7 +32,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
           <Component {...pageProps} key={router.route} />
         </StyledMain>
 
-        <StyledFooter>Forged from 🔥 © {year} Nidratech Ltd.</StyledFooter>
+        <StyledFooter>Forged from 🔥 ©{year} Nidratech Ltd.</StyledFooter>
       </MainLayoutContainer>
     </ThemeProvider>
   );
@@ -44,8 +44,7 @@ const MainLayoutContainer = styled.div`
   min-height: 100vh;
 `;
 const StyledMain = styled.main`
-  margin-top: ${({ theme }) => theme.spacing.navBarHeight};
-  padding: ${({ theme }) => theme.spacing.medium};
+  padding-top: ${({ theme }) => theme.spacing.navBarHeight};
 `;
 const StyledFooter = styled.footer`
   display: flex;
