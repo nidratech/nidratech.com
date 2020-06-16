@@ -19,7 +19,7 @@ function Home() {
 
       <Link href="/contact" passHref>
         <Button type="button" as="a">
-          Contact Us
+          Contact
         </Button>
       </Link>
     </HomeContainer>
@@ -43,14 +43,14 @@ const HomeContainer = styled.div`
   background-size: 100px 199px;
   animation: ${background} 3.5s linear infinite;
   color: ${({ theme }) => theme.colors.white};
-  padding: 6vh 3vw;
+  padding: 10vh 3vw;
 `;
 const PageTitle = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize.large};
+  font-size: 2.5em;
   margin-top: 2vh;
 `;
 const PageSubTitle = styled.h1`
-  font-size: ${({ theme }) => theme.fontSize.medium};
+  font-size: 1.25em;
   margin-top: 5vh;
   margin-bottom: 6vh;
   line-height: 1.5;

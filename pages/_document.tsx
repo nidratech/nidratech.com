@@ -41,32 +41,24 @@ class Document extends NextDocument {
           <meta name="msapplication-TileColor" content="#2d89ef" />
           <meta name="theme-color" content="#ffffff" />
 
-          <meta
-            name="description"
-            content="Nidratech Ltd. - Web Consulting in Touch with Tomorrow"
-          />
+          <meta name="description" content="Nidratech - Web Consulting in Touch with Tomorrow" />
           <meta
             name="keywords"
             content="nidratech,huegasm,tomati,web,mobile,chrome,extension,tech,consulting"
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Nidratech - Web Consulting in Touch with Tomorrow" />
+          <meta property="og:description" content="Web Consulting in Touch with Tomorrow" />
+          <meta property="og:image:width" content="800" />
+          <meta property="og:image:height" content="600" />
+          <meta property="og:locale" content="en_US" />
+          <meta
+            property="og:site_name"
+            content="Nidratech - Web Consulting in Touch with Tomorrow"
           />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
+          <link rel="canonical" href="https://www.nidratech.com/"></link>
         </Head>
 
         <body>

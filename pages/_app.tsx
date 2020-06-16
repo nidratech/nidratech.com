@@ -1,35 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Router from 'next/router';
 import { AppProps } from 'next/app';
+import Router from 'next/router';
 import Head from 'next/head';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
+import { PageTransition } from 'next-page-transitions';
 
 import { GlobalStyles, theme } from 'styles';
-import { trackPageView } from 'lib/analytics';
-import { Header } from 'components';
-
-Router.events.on('routeChangeComplete', (url) => {
-  window.scrollTo(0, 0);
-  trackPageView(url);
-});
+import { Navbar } from 'components';
 
 const year = new Date().getFullYear();
 
+Router.events.on('routeChangeComplete', () => {
+  ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
+});
+
 const App = ({ Component, pageProps, router }: AppProps) => {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  useEffect(() => {
+    ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TRACKING_ID as string);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Nidratech Ltd.</title>
+        <title>Nidratech - Web Consulting in Touch with Tomorrow</title>
       </Head>
 
       <GlobalStyles />
 
       <MainLayoutContainer>
-        <Header />
+        <Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen} />
 
         <StyledMain>
-          <Component {...pageProps} key={router.route} />
+          <PageTransition timeout={200} classNames="page-transition" skipInitialTransition>
+            <Component {...pageProps} key={router.route} />
+          </PageTransition>
         </StyledMain>
 
         <StyledFooter>Forged from 🔥 ©{year} Nidratech Ltd.</StyledFooter>

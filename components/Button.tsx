@@ -22,7 +22,7 @@ function Button({ children, onClick, ...props }: Props, ref: Ref<HTMLButtonEleme
 const StyledButton = styled.button`
   min-width: 8rem;
   background-color: ${({ theme }) => theme.colors.brand};
-  font-size: ${({ theme }) => theme.fontSize.small};
+  font-size: 0.9em;
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
   user-select: none;
@@ -36,7 +36,7 @@ const StyledButton = styled.button`
 
   :focus,
   :hover {
-    background-color: ${({ theme }) => darken(0.1, theme.colors.brand)};
+    background-color: ${({ theme }) => darken(0.05, theme.colors.brand)};
   }
 
   :disabled {

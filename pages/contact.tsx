@@ -13,11 +13,11 @@ function Contact() {
   return (
     <Container>
       <Head>
-        <title>Contact Us</title>
+        <title>Contact - Nidratech</title>
       </Head>
 
       <TitleContainer>
-        <Title>We&apos;d love to hear from you</Title>
+        <Title>Got a project? We want to hear about it</Title>
         <HighlightLine />
       </TitleContainer>
 
@@ -54,7 +54,6 @@ function Contact() {
 
 const formControl = css`
   display: block;
-  width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
@@ -86,12 +85,13 @@ const EmailInput = styled.input`
   ${formControl}
 `;
 const FormGroup = styled.div`
+  display: grid;
   margin-bottom: ${({ theme }) => theme.spacing.medium};
 `;
 const Title = styled.h1`
   text-transform: uppercase;
   font-weight: 700;
-  font-size: ${({ theme }) => theme.fontSize.mediumLarge};
+  font-size: 1.5em;
 `;
 const TitleContainer = styled.div`
   display: inline-block;

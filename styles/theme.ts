@@ -12,12 +12,6 @@ const theme: DefaultTheme = {
     greyLight: COLOR_GREY_LIGHT,
     grey: COLOR_GREY,
   },
-  fontSize: {
-    small: '1em',
-    medium: '1.25em',
-    mediumLarge: '1.5em',
-    large: '2.5em',
-  },
   spacing: {
     navBarHeight: '5rem',
     small: '0.5rem',
