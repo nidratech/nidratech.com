@@ -27,7 +27,7 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
       >
         <NavLinks>
           <li>
-            <Link href={'/'} passHref>
+            <Link href={'/'} as={process.env.BACKEND_URL + '/'} passHref>
               <NavItem
                 as="a"
                 title={'Home'}
@@ -40,7 +40,7 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
           </li>
 
           <li>
-            <Link href={'/clients'} passHref>
+            <Link href={'/clients'} as={process.env.BACKEND_URL + '/clients'} passHref>
               <NavItem
                 as="a"
                 title={'Clients'}
@@ -53,7 +53,7 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
           </li>
 
           <li>
-            <Link href={'/projects'} passHref>
+            <Link href={'/projects'} as={process.env.BACKEND_URL + '/projects'} passHref>
               <NavItem
                 as="a"
                 title={'Projects'}
@@ -66,7 +66,7 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
           </li>
 
           <li>
-            <Link href={'/contact'} passHref>
+            <Link href={'/contact'} as={process.env.BACKEND_URL + '/contact'} passHref>
               <NavItem
                 as="a"
                 title={'Contact'}
