@@ -19,7 +19,7 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
     <>
       <NavBar>
         <FlexContainer>
-          <Link href={'/'} as={process.env.BACKEND_URL + '/'} passHref>
+          <Link href={'/'} passHref>
             <NavItem as="a" aria-label={'Nidratech Ltd.'}>
               <StyledNidratechLogo />
             </NavItem>
@@ -27,7 +27,7 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
 
           <NavLinks>
             <li>
-              <Link href={'/'} as={process.env.BACKEND_URL + '/'} passHref>
+              <Link href={'/'} passHref>
                 <NavItem as="a" title={'Home'} isActive={pathname === '/'}>
                   Home
                 </NavItem>
@@ -35,7 +35,7 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
             </li>
 
             <li>
-              <Link href={'/clients'} as={process.env.BACKEND_URL + '/clients'} passHref>
+              <Link href={'/clients'} passHref>
                 <NavItem as="a" title={'Clients'} isActive={pathname === '/clients'}>
                   Clients
                 </NavItem>
@@ -43,7 +43,7 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
             </li>
 
             <li>
-              <Link href={'/projects'} as={process.env.BACKEND_URL + '/projects'} passHref>
+              <Link href={'/projects'} passHref>
                 <NavItem as="a" title={'Projects'} isActive={pathname === '/projects'}>
                   Projects
                 </NavItem>
@@ -51,7 +51,7 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
             </li>
 
             <li>
-              <Link href={'/contact'} as={process.env.BACKEND_URL + '/contact'} passHref>
+              <Link href={'/contact'} passHref>
                 <NavItem as="a" title={'Contact us'} isActive={pathname === '/contact'}>
                   Contact
                 </NavItem>

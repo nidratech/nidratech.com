@@ -17,7 +17,7 @@ function Home() {
         Let us help you make something remarkable.
       </PageSubTitle>
 
-      <Link href="/contact" as={process.env.BACKEND_URL + '/contact'} passHref>
+      <Link href="/contact" passHref>
         <Button type="button" as="a">
           Contact
         </Button>
