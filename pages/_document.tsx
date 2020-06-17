@@ -58,7 +58,7 @@ class Document extends NextDocument {
             property="og:site_name"
             content="Nidratech - Web Consulting in Touch with Tomorrow"
           />
-          <link rel="canonical" href="https://www.nidratech.com/"></link>
+          <link rel="canonical" href="https://www.nidratech.com"></link>
         </Head>
 
         <body>

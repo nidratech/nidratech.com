@@ -26,49 +26,57 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
         }}
       >
         <NavLinks>
-          <Link href={'/'} passHref>
-            <NavItem
-              as="a"
-              title={'Home'}
-              onClick={() => setIsNavbarOpen(false)}
-              isActive={pathname === '/'}
-            >
-              Home
-            </NavItem>
-          </Link>
+          <li>
+            <Link href={'/'} passHref>
+              <NavItem
+                as="a"
+                title={'Home'}
+                onClick={() => setIsNavbarOpen(false)}
+                isActive={pathname === '/'}
+              >
+                Home
+              </NavItem>
+            </Link>
+          </li>
 
-          <Link href={'/clients'} passHref>
-            <NavItem
-              as="a"
-              title={'Clients'}
-              onClick={() => setIsNavbarOpen(false)}
-              isActive={pathname === '/clients'}
-            >
-              Clients
-            </NavItem>
-          </Link>
+          <li>
+            <Link href={'/clients'} passHref>
+              <NavItem
+                as="a"
+                title={'Clients'}
+                onClick={() => setIsNavbarOpen(false)}
+                isActive={pathname === '/clients'}
+              >
+                Clients
+              </NavItem>
+            </Link>
+          </li>
 
-          <Link href={'/projects'} passHref>
-            <NavItem
-              as="a"
-              title={'Projects'}
-              onClick={() => setIsNavbarOpen(false)}
-              isActive={pathname === '/projects'}
-            >
-              Projects
-            </NavItem>
-          </Link>
+          <li>
+            <Link href={'/projects'} passHref>
+              <NavItem
+                as="a"
+                title={'Projects'}
+                onClick={() => setIsNavbarOpen(false)}
+                isActive={pathname === '/projects'}
+              >
+                Projects
+              </NavItem>
+            </Link>
+          </li>
 
-          <Link href={'/contact'} passHref>
-            <NavItem
-              as="a"
-              title={'Contact'}
-              onClick={() => setIsNavbarOpen(false)}
-              isActive={pathname === '/contact'}
-            >
-              Contact
-            </NavItem>
-          </Link>
+          <li>
+            <Link href={'/contact'} passHref>
+              <NavItem
+                as="a"
+                title={'Contact'}
+                onClick={() => setIsNavbarOpen(false)}
+                isActive={pathname === '/contact'}
+              >
+                Contact
+              </NavItem>
+            </Link>
+          </li>
         </NavLinks>
       </CollapseWrapper>
     );
