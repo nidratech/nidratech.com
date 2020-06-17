@@ -16,6 +16,7 @@ const theme: DefaultTheme = {
     navBarHeight: '5rem',
     small: '0.5rem',
     medium: '1rem',
+    mediumLarge: '1.5rem',
     large: '2rem',
   },
 };

@@ -101,7 +101,7 @@ const NavLinks = styled.ul`
   display: flex;
   align-items: center;
 
-  @media (min-width: 44rem) {
+  @media (min-width: 48rem) {
     display: none;
   }
 `;

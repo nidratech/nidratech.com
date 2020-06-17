@@ -76,7 +76,7 @@ const NavItem = styled.a<{ isActive?: boolean }>`
       darken(0.05, isActive ? theme.colors.brand : theme.colors.grey)};
   }
 
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     padding: 0;
   }
 `;
@@ -96,7 +96,7 @@ const FlexContainer = styled.div`
   height: ${({ theme }) => theme.spacing.navBarHeight};
   background: ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     padding: ${({ theme }) => `0 ${theme.spacing.small}`};
   }
 `;
@@ -107,14 +107,14 @@ const NavLinks = styled.ul`
   display: flex;
   align-items: center;
 
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     display: none;
   }
 `;
 const BurgerWrapper = styled.div`
   margin: auto 0;
 
-  @media (min-width: 44rem) {
+  @media (min-width: 48rem) {
     display: none;
   }
 `;

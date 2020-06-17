@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 
-import { Container, HighlightLine } from 'components';
+import { Container, PageTitle } from 'components';
 
 function Success() {
   return (
@@ -11,20 +11,12 @@ function Success() {
       </Head>
 
       <ThanksTitleContainer>
-        <div>
-          <ThanksTitle>Your email has been successfully sent</ThanksTitle>
-          <HighlightLine />
-        </div>
+        <PageTitle title="Your email has been successfully sent" />
       </ThanksTitleContainer>
     </Container>
   );
 }
 
-const ThanksTitle = styled.h1`
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.5em;
-`;
 const ThanksTitleContainer = styled.div`
   display: flex;
   height: 70vh;

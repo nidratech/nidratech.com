@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-import { Container } from 'components';
+import { PageTitle, Container } from 'components';
 
 function Projects() {
   return (
@@ -10,6 +10,12 @@ function Projects() {
       <Head>
         <title>Projects - Nidratech</title>
       </Head>
+
+      <PageTitle title="What we've been up to lately" />
+
+      <PageSubTitle>
+        Outside of working with our clients, we spend some time working on side projects.
+      </PageSubTitle>
 
       <ProjectContainer>
         <TitleContainer>
@@ -114,17 +120,21 @@ function Projects() {
   );
 }
 
+const PageSubTitle = styled.h3`
+  margin-bottom: ${({ theme }) => theme.spacing.medium};
+  font-size: 1.25em;
+`;
 const InlineProjectImg = styled.img`
   width: 2rem;
   position: relative;
   top: 0.25rem;
 
-  @media (min-width: 44rem) {
+  @media (min-width: 48rem) {
     display: none;
   }
 `;
 const ProjectLink = styled.a`
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     display: none;
   }
 `;
@@ -134,7 +144,7 @@ const TitleContainer = styled.div`
   grid-template-columns: 5rem 1fr;
   align-items: center;
 
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
   }
 `;
@@ -171,8 +181,9 @@ const PromoImages = styled.div`
   grid-gap: ${({ theme }) => theme.spacing.small};
   align-items: center;
   justify-content: center;
+  justify-items: center;
 
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     grid-template-columns: 1fr;
   }
 `;
@@ -189,6 +200,7 @@ const IconContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
+  flex-flow: wrap;
 `;
 const ProjectContainer = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -200,7 +212,7 @@ const ProjectImg = styled.img`
   margin-bottom: ${({ theme }) => theme.spacing.medium};
   padding: 0 0.25rem;
 
-  @media (max-width: 44rem) {
+  @media (max-width: 48rem) {
     margin-bottom: 0;
   }
 `;

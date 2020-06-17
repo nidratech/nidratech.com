@@ -5,6 +5,7 @@ import Router from 'next/router';
 import Head from 'next/head';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
+// @ts-ignore
 import { PageTransition } from 'next-page-transitions';
 
 import { GlobalStyles, theme } from 'styles';

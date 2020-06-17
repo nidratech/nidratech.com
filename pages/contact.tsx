@@ -3,7 +3,7 @@ import Head from 'next/head';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
 
-import { Button, Container, HighlightLine } from 'components';
+import { Button, Container, PageTitle } from 'components';
 
 function Contact() {
   const [email, setEmail] = useState('');
@@ -16,10 +16,7 @@ function Contact() {
         <title>Contact - Nidratech</title>
       </Head>
 
-      <TitleContainer>
-        <Title>Got a project? We want to hear about it</Title>
-        <HighlightLine />
-      </TitleContainer>
+      <PageTitle title="Got a project? We want to hear about it" />
 
       <form action="https://formspree.io/contact@nidratech.com" method="POST">
         <FormGroup>
@@ -86,15 +83,6 @@ const EmailInput = styled.input`
 `;
 const FormGroup = styled.div`
   display: grid;
-  margin-bottom: ${({ theme }) => theme.spacing.medium};
-`;
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.5em;
-`;
-const TitleContainer = styled.div`
-  display: inline-block;
   margin-bottom: ${({ theme }) => theme.spacing.medium};
 `;
 
