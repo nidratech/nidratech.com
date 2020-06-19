@@ -121,7 +121,7 @@ function Projects() {
 }
 
 const PageSubTitle = styled.h3`
-  margin-bottom: ${({ theme }) => theme.spacing.medium};
+  margin-bottom: ${({ theme }) => theme.spacing.mediumLarge};
   font-size: 1.25em;
 `;
 const InlineProjectImg = styled.img`
@@ -129,12 +129,12 @@ const InlineProjectImg = styled.img`
   position: relative;
   top: 0.25rem;
 
-  @media (min-width: 48rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
 `;
 const ProjectLink = styled.a`
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
 `;
@@ -144,7 +144,7 @@ const TitleContainer = styled.div`
   grid-template-columns: 5rem 1fr;
   align-items: center;
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
 `;
@@ -183,7 +183,7 @@ const PromoImages = styled.div`
   justify-content: center;
   justify-items: center;
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
 `;
@@ -212,7 +212,7 @@ const ProjectImg = styled.img`
   margin-bottom: ${({ theme }) => theme.spacing.medium};
   padding: 0 0.25rem;
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     margin-bottom: 0;
   }
 `;

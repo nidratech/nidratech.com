@@ -130,7 +130,7 @@ const GClientLogo = styled(ClientLogo)`
   margin-right: 6rem;
   margin-left: 1rem;
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 4rem;
     margin-right: 2rem;
     margin-left: 0.5rem;

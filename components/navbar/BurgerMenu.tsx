@@ -37,11 +37,11 @@ const Wrapper = styled.div`
   }
   .open span:nth-child(3) {
     transform: rotate(45deg);
-    top: -23px;
+    top: -1.1rem;
   }
   .open span:nth-child(1) {
     transform: rotate(-45deg);
-    top: 11px;
+    top: 1.1rem;
   }
 `;
 

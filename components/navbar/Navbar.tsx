@@ -84,7 +84,7 @@ const NavItem = styled.a<{ isActive?: boolean }>`
       darken(0.05, isActive ? theme.colors.brand : theme.colors.grey)};
   }
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     padding: 0;
   }
 `;
@@ -104,7 +104,7 @@ const FlexContainer = styled.div`
   height: ${({ theme }) => theme.spacing.navBarHeight};
   background: ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     padding: ${({ theme }) => `0 ${theme.spacing.small}`};
   }
 `;
@@ -115,14 +115,14 @@ const NavLinks = styled.ul`
   display: flex;
   align-items: center;
 
-  @media (max-width: 48rem) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
 `;
 const BurgerWrapper = styled.div`
   margin: auto 0;
 
-  @media (min-width: 48rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
 `;

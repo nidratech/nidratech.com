@@ -107,9 +107,9 @@ const NavLinks = styled.ul`
   list-style-type: none;
   padding: 2rem 1rem 2rem 2rem;
   display: flex;
-  align-items: center;
+  justify-content: center;
 
-  @media (min-width: 48rem) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
 `;
