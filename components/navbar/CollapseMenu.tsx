@@ -1,5 +1,6 @@
+import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring';
+import { useTransition, animated } from 'react-spring';
 import Link from 'next/link';
 import { darken } from 'polished';
 import { useRouter } from 'next/router';
@@ -10,79 +11,98 @@ interface Props {
 }
 
 const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
-  const { open } = useSpring({ open: isNavbarOpen ? 0 : 1 });
   const { pathname } = useRouter();
+  const ref = useRef(null);
 
-  if (isNavbarOpen) {
-    return (
-      <CollapseWrapper
-        style={{
-          transform: open
-            .interpolate({
-              range: [0, 0.2, 0.3, 1],
-              output: [0, -20, 0, -200],
-            })
-            .interpolate((openValue) => `translate3d(0, ${openValue}px, 0`),
-        }}
-      >
-        <NavLinks>
-          <li>
-            <Link href={'/'} passHref>
-              <NavItem
-                as="a"
-                title={'Home'}
-                onClick={() => setIsNavbarOpen(false)}
-                isActive={pathname === '/'}
-              >
-                Home
-              </NavItem>
-            </Link>
-          </li>
+  const transitions = useTransition(isNavbarOpen, null, {
+    from: { position: 'absolute', opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
 
-          <li>
-            <Link href={'/clients'} passHref>
-              <NavItem
-                as="a"
-                title={'Clients'}
-                onClick={() => setIsNavbarOpen(false)}
-                isActive={pathname === '/clients'}
-              >
-                Clients
-              </NavItem>
-            </Link>
-          </li>
+  useEffect(() => {
+    const menuToggle = document.querySelector('#menu-toggle');
+    const handleClickOutside = (event) => {
+      if (
+        isNavbarOpen &&
+        !ref?.current.contains(event.target) &&
+        !menuToggle?.contains(event.target)
+      ) {
+        setIsNavbarOpen(false);
+      }
+    };
 
-          <li>
-            <Link href={'/projects'} passHref>
-              <NavItem
-                as="a"
-                title={'Projects'}
-                onClick={() => setIsNavbarOpen(false)}
-                isActive={pathname === '/projects'}
-              >
-                Projects
-              </NavItem>
-            </Link>
-          </li>
+    document.addEventListener('mousedown', handleClickOutside);
 
-          <li>
-            <Link href={'/contact'} passHref>
-              <NavItem
-                as="a"
-                title={'Contact'}
-                onClick={() => setIsNavbarOpen(false)}
-                isActive={pathname === '/contact'}
-              >
-                Contact
-              </NavItem>
-            </Link>
-          </li>
-        </NavLinks>
-      </CollapseWrapper>
-    );
-  }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [ref, isNavbarOpen]);
 
-  return null;
+  return (
+    <>
+      {transitions.map(
+        ({ item, key, props }) =>
+          item && (
+            <CollapseWrapper ref={ref} key={key} style={props}>
+              <NavLinks>
+                <li>
+                  <Link href={'/'} passHref>
+                    <NavItem
+                      as="a"
+                      title={'Home'}
+                      onClick={() => setIsNavbarOpen(false)}
+                      isActive={pathname === '/'}
+                    >
+                      Home
+                    </NavItem>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href={'/clients'} passHref>
+                    <NavItem
+                      as="a"
+                      title={'Clients'}
+                      onClick={() => setIsNavbarOpen(false)}
+                      isActive={pathname === '/clients'}
+                    >
+                      Clients
+                    </NavItem>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href={'/projects'} passHref>
+                    <NavItem
+                      as="a"
+                      title={'Projects'}
+                      onClick={() => setIsNavbarOpen(false)}
+                      isActive={pathname === '/projects'}
+                    >
+                      Projects
+                    </NavItem>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href={'/contact'} passHref>
+                    <NavItem
+                      as="a"
+                      title={'Contact'}
+                      onClick={() => setIsNavbarOpen(false)}
+                      isActive={pathname === '/contact'}
+                    >
+                      Contact
+                    </NavItem>
+                  </Link>
+                </li>
+              </NavLinks>
+            </CollapseWrapper>
+          )
+      )}
+    </>
+  );
 };
 
 const NavItem = styled.a<{ isActive?: boolean }>`

@@ -24,10 +24,10 @@ function Clients() {
               Google
             </a>
             <ClientAddress>Mountain View, USA</ClientAddress>
-            <p>
-              We&apos;ve been working as contractors for Google Nest since 2016. <br />
+            <p>We&apos;ve been working as contractors for Google Nest since 2016.</p>
+            <ProjectList>
               Projects: Google Nest Login, Google Store, Nest Enterprise Portal, Nest HVAC Portal.
-            </p>
+            </ProjectList>
           </ClientInfo>
         </ListGroupItem>
 
@@ -124,6 +124,10 @@ const ClientLogoContainer = styled.div`
 const ClientLogo = styled.img`
   width: 8rem;
   margin-right: 5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin-right: 2rem;
+  }
 `;
 const GClientLogo = styled(ClientLogo)`
   width: 6rem;
@@ -142,6 +146,9 @@ const ListGroupItem = styled.li`
   border: 1px solid rgba(0, 0, 0, 0.125);
   padding: 0.75rem 1.25rem;
   margin-bottom: ${({ theme }) => theme.spacing.medium};
+`;
+const ProjectList = styled.p`
+  margin-top: 0.25rem;
 `;
 
 export default Clients;

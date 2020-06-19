@@ -8,7 +8,7 @@ interface Props {
 const BurgerMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
   return (
     <Wrapper onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
-      <div className={isNavbarOpen ? 'open' : ''}>
+      <div id="menu-toggle" className={isNavbarOpen ? 'open' : ''}>
         <span>&nbsp;</span>
         <span>&nbsp;</span>
         <span>&nbsp;</span>
@@ -27,6 +27,7 @@ const Wrapper = styled.div`
     background: ${({ theme }) => theme.colors.brand};
     display: block;
     position: relative;
+    user-select: none;
     width: 3.5rem;
     height: 0.4rem;
     margin-bottom: 0.7rem;

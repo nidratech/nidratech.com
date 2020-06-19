@@ -38,10 +38,6 @@ const GlobalStyles = () => (
   <>
     <Reset />
     <GlobalStyle />
-
-    <style global jsx>{`
-      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
-    `}</style>
   </>
 );
 

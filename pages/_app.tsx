@@ -5,12 +5,12 @@ import Router from 'next/router';
 import Head from 'next/head';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
-// @ts-ignore
 import { PageTransition } from 'next-page-transitions';
 
 import { GlobalStyles, theme } from 'styles';
 import { Navbar } from 'components';
 
+require('typeface-roboto');
 const year = new Date().getFullYear();
 
 Router.events.on('routeChangeComplete', () => {
@@ -58,7 +58,7 @@ const StyledMain = styled.main`
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacing.medium};
+  padding: ${({ theme }) => theme.spacing.large};
   color: ${({ theme }) => theme.colors.grey};
 `;
 
