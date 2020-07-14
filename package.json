@@ -20,17 +20,17 @@
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
-    "@types/node": "^14.0.22",
+    "@types/node": "^14.0.23",
     "@types/styled-components": "^5.1.1",
-    "@typescript-eslint/eslint-plugin": "^3.6.0",
-    "@typescript-eslint/parser": "^3.6.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-plugin-transform-define": "^2.0.0",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
-    "next-deploy": "^0.1.2",
+    "next-deploy": "^0.2.0-alpha-0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.6"
   }

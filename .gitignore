@@ -20,3 +20,4 @@ yarn-error.log*
 /_next
 /out
 /.next-deploy
+/.next-deploy-build
