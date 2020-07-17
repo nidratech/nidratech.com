@@ -16,7 +16,7 @@
     "react-ga": "^3.1.2",
     "react-spring": "^8.0.27",
     "styled-components": "^5.1.1",
-    "styled-reset": "^4.2.0",
+    "styled-reset": "^4.2.1",
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
@@ -30,8 +30,8 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
-    "next-deploy": "^0.2.0-alpha-0",
+    "next-deploy": "^0.3.0",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   }
 }
