@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { NextPage } from 'next';
 
 import { Container, PageTitle } from 'components';
 
-function Success() {
+const Success: NextPage = () => {
   return (
     <Container>
       <Head>
@@ -15,7 +16,7 @@ function Success() {
       </ThanksTitleContainer>
     </Container>
   );
-}
+};
 
 const ThanksTitleContainer = styled.div`
   display: flex;

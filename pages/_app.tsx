@@ -6,18 +6,20 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
 import { PageTransition } from 'next-page-transitions';
+import { NextPage } from 'next';
 
 import { GlobalStyles, theme } from 'styles';
 import { Navbar } from 'components';
 
-require('typeface-roboto');
+import 'typeface-roboto';
+
 const year = new Date().getFullYear();
 
 Router.events.on('routeChangeComplete', () => {
   ReactGA.pageview(`${window.location.pathname}${window.location.search}`);
 });
 
-const App = ({ Component, pageProps, router }: AppProps) => {
+const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   useEffect(() => {

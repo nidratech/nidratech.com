@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { NextPage } from 'next';
 
 import { PageTitle, Container } from 'components';
 
-function Projects() {
+const Projects: NextPage = () => {
   return (
     <Container>
       <Head>
@@ -118,7 +119,7 @@ function Projects() {
       </ProjectContainer>
     </Container>
   );
-}
+};
 
 const PageSubTitle = styled.h3`
   margin-bottom: ${({ theme }) => theme.spacing.mediumLarge};

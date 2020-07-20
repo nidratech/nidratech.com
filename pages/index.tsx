@@ -1,9 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import Link from 'next/link';
+import { NextPage } from 'next';
 
 import { Button, HighlightLine } from 'components';
 
-function Home() {
+const Home: NextPage = () => {
   return (
     <HomeContainer>
       <PageTitleContainer>
@@ -24,7 +25,7 @@ function Home() {
       </Link>
     </HomeContainer>
   );
-}
+};
 const background = keyframes`
   0% {
     background-position: 0 0;

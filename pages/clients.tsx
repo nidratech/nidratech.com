@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import { NextPage } from 'next';
 
 import { Container, PageTitle } from 'components';
 
-function Clients() {
+const Clients: NextPage = () => {
   return (
     <Container>
       <Head>
@@ -103,7 +104,7 @@ function Clients() {
       </ul>
     </Container>
   );
-}
+};
 
 const ClientAddress = styled.p`
   color: ${({ theme }) => theme.colors.grey};

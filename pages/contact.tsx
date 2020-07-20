@@ -2,10 +2,11 @@ import { useState } from 'react';
 import Head from 'next/head';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
+import { NextPage } from 'next';
 
 import { Button, Container, PageTitle } from 'components';
 
-function Contact() {
+const Contact: NextPage = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const isSubmitEnabled = email.length > 2 && message.length > 2;
@@ -47,7 +48,7 @@ function Contact() {
       </form>
     </Container>
   );
-}
+};
 
 const formControl = css`
   display: block;
