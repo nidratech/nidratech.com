@@ -5,10 +5,12 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "deploy": "next-deploy"
   },
   "dependencies": {
-    "next": "^9.4.4",
+    "next": "^9.5.0",
     "next-page-transitions": "^1.0.0-beta.2",
     "polished": "^3.6.5",
     "react": "^16.13.1",
@@ -20,17 +22,17 @@
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
-    "@types/node": "^14.0.24",
+    "@types/node": "^14.0.26",
     "@types/styled-components": "^5.1.1",
-    "@typescript-eslint/eslint-plugin": "^3.7.0",
-    "@typescript-eslint/parser": "^3.7.0",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-plugin-transform-define": "^2.0.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
-    "next-deploy": "^1.0.0",
+    "eslint-plugin-react": "^7.20.4",
+    "next-deploy": "^1.0.1",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   }

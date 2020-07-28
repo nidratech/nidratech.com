@@ -14,7 +14,7 @@ const Contact: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Contact - Nidratech</title>
+        <title>Contact | Nidratech</title>
       </Head>
 
       <PageTitle title="Got a project? We want to hear about it" />

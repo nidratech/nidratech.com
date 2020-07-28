@@ -9,7 +9,7 @@ const Projects: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Projects - Nidratech</title>
+        <title>Projects | Nidratech</title>
       </Head>
 
       <PageTitle title="What we've been up to lately" />

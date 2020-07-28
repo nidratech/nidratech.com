@@ -46,7 +46,6 @@ class Document extends NextDocument {
             name="keywords"
             content="nidratech,huegasm,tomati,web,mobile,chrome,extension,tech,consulting"
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Nidratech - Web Consulting in Touch with Tomorrow" />

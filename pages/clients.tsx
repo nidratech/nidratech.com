@@ -8,7 +8,7 @@ const Clients: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Clients - Nidratech</title>
+        <title>Clients | Nidratech</title>
       </Head>
 
       <PageTitle title="Some of our clients include" />
