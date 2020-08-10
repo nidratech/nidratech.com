@@ -4864,10 +4864,10 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next-deploy@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/next-deploy/-/next-deploy-1.2.0.tgz#de0717c196b2f96950992e03b8329ce6cdc730cd"
-  integrity sha512-bUs4oeOsr4u8IJD8Z7i2hLdYx7iFPPAUlH9JzTy1MqgzgdMAHSKpoiw/TfTdbijUlyvufBOWWJsrOBqSv7Huaw==
+next-deploy@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/next-deploy/-/next-deploy-1.2.1.tgz#0e3f6694528c69451635b126ae9e9259b0ee4526"
+  integrity sha512-MbGymS3Ez4jAS690XnlCHQBm447TOTosLZ2Iw+DQva4HQiL9QP9yQArzH8bum99h+rCR/zHdGyWflmVXLpIV1g==
   dependencies:
     "@serverless/core" "^1.1.2"
     "@zeit/node-file-trace" "^0.8.2"

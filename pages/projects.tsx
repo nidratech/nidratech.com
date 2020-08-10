@@ -99,22 +99,6 @@ const Projects: NextPage = () => {
           >
             <ChromeStoreIcon src="images/chrome-store-badge.png" title="Chrome extension" />
           </a>
-
-          <a
-            href="https://play.google.com/store/apps/details?id=com.hoboman313.huegasm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <PlayStoreIcon src="images/android-play-badge.png" title="Android app" />
-          </a>
-
-          <a
-            href="https://itunes.apple.com/us/app/huegasm-for-philips-hue-lights/id1403108485"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AppStoreIcon src="images/app-store-badge.svg" alt="iOS app" />
-          </a>
         </IconContainer>
       </ProjectContainer>
     </Container>
