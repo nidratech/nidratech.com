@@ -10,7 +10,7 @@
     "deploy": "next-deploy"
   },
   "dependencies": {
-    "next": "^9.5.1",
+    "next": "^9.5.4",
     "next-page-transitions": "^1.0.0-beta.2",
     "polished": "^3.6.5",
     "react": "^16.13.1",
