@@ -8,9 +8,6 @@ export const GlobalStyle = createGlobalStyle`
   #__next {
     font-family: 'Roboto', sans-serif;
   }
-  *, html * {
-    transition: color 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
-  }
   html, body {
     font-family: 'Roboto', sans-serif;
   }
