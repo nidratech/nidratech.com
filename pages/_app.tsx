@@ -11,7 +11,7 @@ import { NextPage } from 'next';
 import { GlobalStyles, theme } from 'styles';
 import { Navbar } from 'components';
 
-import 'typeface-roboto';
+import 'fontsource-roboto';
 
 const year = new Date().getFullYear();
 
