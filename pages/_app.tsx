@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { AppProps } from 'next/app';
 import Router from 'next/router';
 import Head from 'next/head';
-import styled from 'styled-components';
 import ReactGA from 'react-ga';
 import { PageTransition } from 'next-page-transitions';
 import { NextPage } from 'next';
