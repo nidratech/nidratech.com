@@ -6,7 +6,7 @@ interface Props {
   title: string;
 }
 
-function PageTitle({ title }: Props) {
+function PageTitle({ title }: Props): JSX.Element {
   return (
     <TitleContainer>
       <Title>{title}</Title>

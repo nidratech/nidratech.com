@@ -29,7 +29,7 @@ class Document extends NextDocument {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang={'en'}>
         <Head>

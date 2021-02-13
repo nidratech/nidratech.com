@@ -12,7 +12,7 @@ interface Props {
   setIsNavbarOpen: (...args: any[]) => void;
 }
 
-const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
+const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props): JSX.Element => {
   const { pathname } = useRouter();
 
   return (
