@@ -42,7 +42,7 @@ const Contact: NextPage = () => {
 
         <input type="hidden" name="_next" value="https://www.nidratech.com/success" />
 
-        <Button disabled={!isSubmitEnabled} type="submit">
+        <Button isDisabled={!isSubmitEnabled} type="submit">
           Submit
         </Button>
       </form>
