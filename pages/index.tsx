@@ -1,12 +1,19 @@
 import styled, { keyframes } from 'styled-components';
 import Link from 'next/link';
 import { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 
 import { Button, HighlightLine } from 'components';
 
 const Home: NextPage = () => {
   return (
     <HomeContainer>
+      <NextSeo
+        title="Nidratech"
+        description="The company site of Nidratech."
+        canonical="https://www.nidratech.com"
+      />
+
       <PageTitleContainer>
         <PageTitle>Web Consulting in Touch with Tomorrow</PageTitle>
 

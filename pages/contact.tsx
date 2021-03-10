@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
 import { NextPage } from 'next';
@@ -13,9 +13,11 @@ const Contact: NextPage = () => {
 
   return (
     <Container>
-      <Head>
-        <title>Contact | Nidratech</title>
-      </Head>
+      <NextSeo
+        title="Contact | Nidratech"
+        description="Contact form for Nidratech."
+        canonical="https://www.nidratech.com/contact"
+      />
 
       <PageTitle title="Got a project? We want to hear about it" />
 

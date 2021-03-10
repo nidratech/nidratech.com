@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 import { darken } from 'polished';
 import { NextPage } from 'next';
@@ -8,9 +8,11 @@ import { PageTitle, Container } from 'components';
 const Projects: NextPage = () => {
   return (
     <Container>
-      <Head>
-        <title>Projects | Nidratech</title>
-      </Head>
+      <NextSeo
+        title="Projects | Nidratech"
+        description="Past projects of Nidratech."
+        canonical="https://www.nidratech.com/projects"
+      />
 
       <PageTitle title="What we've been up to lately" />
 

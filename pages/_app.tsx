@@ -28,7 +28,6 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Nidratech - Web Consulting in Touch with Tomorrow</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
