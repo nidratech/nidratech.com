@@ -22,13 +22,13 @@ const Projects: NextPage = () => {
 
       <ProjectContainer>
         <TitleContainer>
-          <ProjectLink href="https://www.tomati.io" rel="noreferrer" target="_blank">
+          <ProjectLink href="https://score.restaurant/" rel="noreferrer" target="_blank">
             <img src="images/tomati-logo.png" title="Tomati" />
           </ProjectLink>
 
           <div>
             <TomatiTitle>
-              <a href="https://www.tomati.io" rel="noreferrer" target="_blank">
+              <a href="https://score.restaurant/" rel="noreferrer" target="_blank">
                 <InlineProjectImg src="images/tomati-logo.png" title="Tomati" /> Tomati
               </a>
             </TomatiTitle>
@@ -38,6 +38,12 @@ const Projects: NextPage = () => {
               hundreds of thousands of Canadian and American food establishments and aggregate them
               with Groupon deals, data from Google, Yelp and Zomato to provide the user with a rich
               collection of information about the favorite local restaurants.
+            </p>
+            <p>
+              Tomati was very recently rejuvenated as a web experience at{' '}
+              <a href="https://score.restaurant" rel="noreferrer" target="_blank">
+                https://score.restaurant
+              </a>
             </p>
           </div>
         </TitleContainer>

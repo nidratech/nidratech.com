@@ -18,6 +18,22 @@ const Clients: NextPage = () => {
       <ul>
         <ListGroupItem>
           <ClientLogoContainer>
+            <a href="https://www.panasonic.com" target="_blank" rel="noopener noreferrer">
+              <GClientLogo src="images/panasonic-logo.jpg" title="Panasonic" />
+            </a>
+          </ClientLogoContainer>
+          <ClientInfo>
+            <a href="https://www.panasonic.com" target="_blank" rel="noopener noreferrer">
+              Panasonic
+            </a>
+            <ClientAddress>Palo Alto, USA</ClientAddress>
+            <p>We&apos;ve been contracting with Panasonic since 2020.</p>
+            <ProjectList>Projects: YoLabs</ProjectList>
+          </ClientInfo>
+        </ListGroupItem>
+
+        <ListGroupItem>
+          <ClientLogoContainer>
             <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
               <GClientLogo src="images/glogo.png" title="European Gemological Laboratory" />
             </a>
@@ -27,7 +43,7 @@ const Clients: NextPage = () => {
               Google
             </a>
             <ClientAddress>Mountain View, USA</ClientAddress>
-            <p>We&apos;ve been working as contractors for Google Nest since 2016.</p>
+            <p>We&apos;ve been contracting with Google 2016 - 2020.</p>
             <ProjectList>
               Projects: Google Nest Login, Google Store, Nest Enterprise Portal, Nest HVAC Portal.
             </ProjectList>
