@@ -53,24 +53,6 @@ const Projects: NextPage = () => {
           <ProjectImg src="images/tomati-4.jpg" alt="Tomati screenshot #2" />
           <ProjectImg src="images/tomati-2.jpg" alt="Tomati screenshot #3" />
         </PromoImages>
-
-        <IconContainer>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.nidratech.tomati"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <PlayStoreIcon src="images/android-play-badge.png" title="Android app" />
-          </a>
-
-          <a
-            href="https://itunes.apple.com/us/app/tomati-restaurant-inspector/id1440846554"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <AppStoreIcon src="images/app-store-badge.svg" alt="iOS app" />
-          </a>
-        </IconContainer>
       </ProjectContainer>
 
       <ProjectContainer>
@@ -182,12 +164,6 @@ const PromoImages = styled.div`
 `;
 const ChromeStoreIcon = styled.img`
   width: 10.5rem;
-`;
-const PlayStoreIcon = styled.img`
-  width: 9.25rem;
-`;
-const AppStoreIcon = styled.img`
-  width: 7.5rem;
 `;
 const IconContainer = styled.div`
   display: flex;
