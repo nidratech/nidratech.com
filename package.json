@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^4.4.5",
-    "next": "^11.0.1",
+    "next": "^11.1.0",
     "next-page-transitions": "^1.0.0-beta.2",
     "next-seo": "^4.26.0",
     "polished": "^4.1.3",
