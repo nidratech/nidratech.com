@@ -7,7 +7,7 @@ import NextDocument, {
   DocumentInitialProps,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { AppType } from 'next/dist/next-server/lib/utils';
+import { AppType } from 'next/dist/shared/lib/utils';
 
 class Document extends NextDocument {
   // this is the key to making styled components reload properly in an SSR environment
