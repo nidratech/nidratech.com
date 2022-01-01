@@ -4,125 +4,143 @@ import { NextPage } from 'next';
 
 import { Container, PageTitle } from 'components';
 
-const Clients: NextPage = () => {
-  return (
-    <Container>
-      <NextSeo
-        title="Clients | Nidratech"
-        description="Past clients of Nidratech."
-        canonical="https://www.nidratech.com/clients"
-      />
+const Clients: NextPage = () => (
+  <Container>
+    <NextSeo
+      title="Clients | Nidratech"
+      description="Past clients of Nidratech."
+      canonical="https://www.nidratech.com/clients"
+    />
 
-      <PageTitle title="Some of our clients include" />
+    <PageTitle title="Some of our clients include" />
 
-      <ul>
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="https://www.panasonic.com" target="_blank" rel="noopener noreferrer">
-              <GClientLogo src="images/panasonic-logo.jpg" title="Panasonic" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="https://www.panasonic.com" target="_blank" rel="noopener noreferrer">
-              Panasonic
-            </a>
-            <ClientAddress>Palo Alto, USA</ClientAddress>
-            <p>We&apos;ve been contracting with Panasonic since 2020.</p>
-            <ProjectList>Projects: YoLabs</ProjectList>
-          </ClientInfo>
-        </ListGroupItem>
+    <ul>
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="https://www.panasonic.com" target="_blank" rel="noopener noreferrer">
+            <GClientLogo src="images/panasonic-logo.jpg" alt="Panasonic" title="Panasonic" />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="https://www.panasonic.com" target="_blank" rel="noopener noreferrer">
+            Panasonic
+          </a>
+          <ClientAddress>Palo Alto, USA</ClientAddress>
+          <p>We&apos;ve been contracting with Panasonic since 2020.</p>
+          <ProjectList>Projects: YoLabs</ProjectList>
+        </ClientInfo>
+      </ListGroupItem>
 
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
-              <GClientLogo src="images/glogo.png" title="European Gemological Laboratory" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
-              Google
-            </a>
-            <ClientAddress>Mountain View, USA</ClientAddress>
-            <p>We&apos;ve been contracting with Google 2016 - 2020.</p>
-            <ProjectList>
-              Projects: Google Nest Login, Google Store, Nest Enterprise Portal, Nest HVAC Portal.
-            </ProjectList>
-          </ClientInfo>
-        </ListGroupItem>
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+            <GClientLogo
+              src="images/glogo.png"
+              alt="European Gemological Laboratory"
+              title="European Gemological Laboratory"
+            />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+            Google
+          </a>
+          <ClientAddress>Mountain View, USA</ClientAddress>
+          <p>We&apos;ve been contracting with Google 2016 - 2020.</p>
+          <ProjectList>
+            Projects: Google Nest Login, Google Store, Nest Enterprise Portal, Nest HVAC Portal.
+          </ProjectList>
+        </ClientInfo>
+      </ListGroupItem>
 
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="http://www.egllaboratories.org/" target="_blank" rel="noopener noreferrer">
-              <ClientLogo src="images/egl-logo.png" title="European Gemological Laboratory" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="http://www.egllaboratories.org/" target="_blank" rel="noopener noreferrer">
-              European Gemological Laboratory
-            </a>
-            <ClientAddress>New York, USA</ClientAddress>
-          </ClientInfo>
-        </ListGroupItem>
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="http://www.egllaboratories.org/" target="_blank" rel="noopener noreferrer">
+            <ClientLogo
+              src="images/egl-logo.png"
+              alt="European Gemological Laboratory"
+              title="European Gemological Laboratory"
+            />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="http://www.egllaboratories.org/" target="_blank" rel="noopener noreferrer">
+            European Gemological Laboratory
+          </a>
+          <ClientAddress>New York, USA</ClientAddress>
+        </ClientInfo>
+      </ListGroupItem>
 
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="https://www.cglgrs.com/" target="_blank" rel="noopener noreferrer">
-              <ClientLogo src="images/cgl-logo.png" title="Canadian Gemological Laboratory" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="https://www.cglgrs.com/" target="_blank" rel="noopener noreferrer">
-              Canadian Gemological Laboratory
-            </a>
-            <ClientAddress>Vancouver, BC, Canada</ClientAddress>
-          </ClientInfo>
-        </ListGroupItem>
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="https://www.cglgrs.com/" target="_blank" rel="noopener noreferrer">
+            <ClientLogo
+              src="images/cgl-logo.png"
+              alt="Canadian Gemological Laboratory"
+              title="Canadian Gemological Laboratory"
+            />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="https://www.cglgrs.com/" target="_blank" rel="noopener noreferrer">
+            Canadian Gemological Laboratory
+          </a>
+          <ClientAddress>Vancouver, BC, Canada</ClientAddress>
+        </ClientInfo>
+      </ListGroupItem>
 
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="http://ggacanada.ca/" target="_blank" rel="noopener noreferrer">
-              <ClientLogo src="images/gga-logo.jpg" title="Gems Grading &#38; Appraising" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="http://ggacanada.ca/" target="_blank" rel="noopener noreferrer">
-              Gems Grading &#38; Appraising
-            </a>
-            <ClientAddress>Vancouver, BC, Canada</ClientAddress>
-          </ClientInfo>
-        </ListGroupItem>
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="http://ggacanada.ca/" target="_blank" rel="noopener noreferrer">
+            <ClientLogo
+              src="images/gga-logo.jpg"
+              alt="Gems Grading &#38; Appraising"
+              title="Gems Grading &#38; Appraising"
+            />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="http://ggacanada.ca/" target="_blank" rel="noopener noreferrer">
+            Gems Grading &#38; Appraising
+          </a>
+          <ClientAddress>Vancouver, BC, Canada</ClientAddress>
+        </ClientInfo>
+      </ListGroupItem>
 
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="https://ia.ca/" target="_blank" rel="noopener noreferrer">
-              <ClientLogo src="images/ia-financial-logo.svg" title="iA Financial Group" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="https://ia.ca/" target="_blank" rel="noopener noreferrer">
-              iA Financial Group
-            </a>
-            <ClientAddress>Vancouver, BC, Canada</ClientAddress>
-          </ClientInfo>
-        </ListGroupItem>
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="https://ia.ca/" target="_blank" rel="noopener noreferrer">
+            <ClientLogo
+              src="images/ia-financial-logo.svg"
+              alt="iA Financial Group"
+              title="iA Financial Group"
+            />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="https://ia.ca/" target="_blank" rel="noopener noreferrer">
+            iA Financial Group
+          </a>
+          <ClientAddress>Vancouver, BC, Canada</ClientAddress>
+        </ClientInfo>
+      </ListGroupItem>
 
-        <ListGroupItem>
-          <ClientLogoContainer>
-            <a href="https://www.worksafebc.com/" target="_blank" rel="noopener noreferrer">
-              <ClientLogo src="images/wsbc-logo.jpg" title="WorkSafe BC" />
-            </a>
-          </ClientLogoContainer>
-          <ClientInfo>
-            <a href="https://www.worksafebc.com/" target="_blank" rel="noopener noreferrer">
-              WorkSafe BC
-            </a>
-            <ClientAddress>Richmond, BC, Canada</ClientAddress>
-          </ClientInfo>
-        </ListGroupItem>
-      </ul>
-    </Container>
-  );
-};
+      <ListGroupItem>
+        <ClientLogoContainer>
+          <a href="https://www.worksafebc.com/" target="_blank" rel="noopener noreferrer">
+            <ClientLogo src="images/wsbc-logo.jpg" alt="WorkSafe BC" title="WorkSafe BC" />
+          </a>
+        </ClientLogoContainer>
+        <ClientInfo>
+          <a href="https://www.worksafebc.com/" target="_blank" rel="noopener noreferrer">
+            WorkSafe BC
+          </a>
+          <ClientAddress>Richmond, BC, Canada</ClientAddress>
+        </ClientInfo>
+      </ListGroupItem>
+    </ul>
+  </Container>
+);
 
 const ClientAddress = styled.p`
   color: ${({ theme }) => theme.colors.grey};

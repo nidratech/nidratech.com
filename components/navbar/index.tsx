@@ -12,47 +12,57 @@ interface Props {
   setIsNavbarOpen: (...args: any[]) => void;
 }
 
-const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props): JSX.Element => {
+const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
   const { pathname } = useRouter();
 
   return (
     <>
       <NavBar>
         <FlexContainer>
-          <Link href={'/'} passHref>
-            <NavItem as="a" aria-label={'Nidratech Ltd.'}>
+          <Link href="/" passHref>
+            <NavItem href="/" as="a" aria-label="Nidratech Ltd.">
               <StyledNidratechLogo />
             </NavItem>
           </Link>
 
           <NavLinks>
             <li>
-              <Link href={'/'} passHref>
-                <NavItem as="a" title={'Home'} isActive={pathname === '/'}>
+              <Link href="/" passHref>
+                <NavItem href="/" as="a" title="Home" isActive={pathname === '/'}>
                   Home
                 </NavItem>
               </Link>
             </li>
 
             <li>
-              <Link href={'/clients'} passHref>
-                <NavItem as="a" title={'Clients'} isActive={pathname === '/clients'}>
+              <Link href="/clients" passHref>
+                <NavItem href="/clients" as="a" title="Clients" isActive={pathname === '/clients'}>
                   Clients
                 </NavItem>
               </Link>
             </li>
 
             <li>
-              <Link href={'/projects'} passHref>
-                <NavItem as="a" title={'Projects'} isActive={pathname === '/projects'}>
+              <Link href="/projects" passHref>
+                <NavItem
+                  href="/projects"
+                  as="a"
+                  title="Projects"
+                  isActive={pathname === '/projects'}
+                >
                   Projects
                 </NavItem>
               </Link>
             </li>
 
             <li>
-              <Link href={'/contact'} passHref>
-                <NavItem as="a" title={'Contact us'} isActive={pathname === '/contact'}>
+              <Link href="/contact" passHref>
+                <NavItem
+                  href="/contact"
+                  as="a"
+                  title="Contact us"
+                  isActive={pathname === '/contact'}
+                >
                   Contact
                 </NavItem>
               </Link>

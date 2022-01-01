@@ -5,95 +5,98 @@ import { NextPage } from 'next';
 
 import { PageTitle, Container } from 'components';
 
-const Projects: NextPage = () => {
-  return (
-    <Container>
-      <NextSeo
-        title="Projects | Nidratech"
-        description="Past projects of Nidratech."
-        canonical="https://www.nidratech.com/projects"
-      />
+const Projects: NextPage = () => (
+  <Container>
+    <NextSeo
+      title="Projects | Nidratech"
+      description="Past projects of Nidratech."
+      canonical="https://www.nidratech.com/projects"
+    />
 
-      <PageTitle title="What we've been up to lately" />
+    <PageTitle title="What we've been up to lately" />
 
-      <PageSubTitle>
-        Outside of working with our clients, we spend some time working on side projects.
-      </PageSubTitle>
+    <PageSubTitle>
+      Outside of working with our clients, we spend some time working on side projects.
+    </PageSubTitle>
 
-      <ProjectContainer>
-        <TitleContainer>
-          <ProjectLink href="https://score.restaurant/" rel="noreferrer" target="_blank">
-            <img src="images/tomati-logo.png" title="Tomati" />
-          </ProjectLink>
+    <ProjectContainer>
+      <TitleContainer>
+        <ProjectLink href="https://score.restaurant/" rel="noreferrer" target="_blank">
+          <img src="images/tomati-logo.png" alt="Tomati" title="Tomati" />
+        </ProjectLink>
 
-          <div>
-            <TomatiTitle>
-              <a href="https://score.restaurant/" rel="noreferrer" target="_blank">
-                <InlineProjectImg src="images/tomati-logo.png" title="Tomati" /> Tomati
-              </a>
-            </TomatiTitle>
+        <div>
+          <TomatiTitle>
+            <a href="https://score.restaurant/" rel="noreferrer" target="_blank">
+              <InlineProjectImg src="images/tomati-logo.png" alt="Tomati" title="Tomati" /> Tomati
+            </a>
+          </TomatiTitle>
 
-            <p>
-              A restaurant health inspection reports aggregator. We gather inspection reports from
-              hundreds of thousands of Canadian and American food establishments and aggregate them
-              with Groupon deals, data from Google, Yelp and Zomato to provide the user with a rich
-              collection of information about the favorite local restaurants.
-            </p>
-            <p>
-              Tomati was very recently rejuvenated as a web experience at{' '}
-              <a href="https://score.restaurant" rel="noreferrer" target="_blank">
-                https://score.restaurant
-              </a>
-            </p>
-          </div>
-        </TitleContainer>
+          <p>
+            A restaurant health inspection reports aggregator. We gather inspection reports from
+            hundreds of thousands of Canadian and American food establishments and aggregate them
+            with Groupon deals, data from Google, Yelp and Zomato to provide the user with a rich
+            collection of information about the favorite local restaurants.
+          </p>
+          <p>
+            Tomati was very recently rejuvenated as a web experience at{' '}
+            <a href="https://score.restaurant" rel="noreferrer" target="_blank">
+              https://score.restaurant
+            </a>
+          </p>
+        </div>
+      </TitleContainer>
 
-        <PromoImages>
-          <ProjectImg src="images/tomati-1.jpg" alt="Tomati screenshot #1" />
-          <ProjectImg src="images/tomati-4.jpg" alt="Tomati screenshot #2" />
-          <ProjectImg src="images/tomati-2.jpg" alt="Tomati screenshot #3" />
-        </PromoImages>
-      </ProjectContainer>
+      <PromoImages>
+        <ProjectImg src="images/tomati-1.jpg" alt="Tomati screenshot #1" />
+        <ProjectImg src="images/tomati-4.jpg" alt="Tomati screenshot #2" />
+        <ProjectImg src="images/tomati-2.jpg" alt="Tomati screenshot #3" />
+      </PromoImages>
+    </ProjectContainer>
 
-      <ProjectContainer>
-        <TitleContainer>
-          <ProjectLink href="https://www.huegasm.com" rel="noreferrer" target="_blank">
-            <img src="images/huegasm-logo.png" title="Huegasm" />
-          </ProjectLink>
+    <ProjectContainer>
+      <TitleContainer>
+        <ProjectLink href="https://www.huegasm.com" rel="noreferrer" target="_blank">
+          <img src="images/huegasm-logo.png" alt="Huegasm" title="Huegasm" />
+        </ProjectLink>
 
-          <div>
-            <HuegasmTitle>
-              <a href="https://www.huegasm.com" rel="noreferrer" target="_blank">
-                <InlineProjectImg src="images/huegasm-logo.png" title="Huegasm" /> Huegasm
-              </a>
-            </HuegasmTitle>
+        <div>
+          <HuegasmTitle>
+            <a href="https://www.huegasm.com" rel="noreferrer" target="_blank">
+              <InlineProjectImg src="images/huegasm-logo.png" alt="Huegasm" title="Huegasm" />{' '}
+              Huegasm
+            </a>
+          </HuegasmTitle>
 
-            <p>
-              A Chrome extension, web, Android and iOS app for controlling and syncing Philips Hue
-              lights with music.
-            </p>
-          </div>
-        </TitleContainer>
+          <p>
+            A Chrome extension, web, Android and iOS app for controlling and syncing Philips Hue
+            lights with music.
+          </p>
+        </div>
+      </TitleContainer>
 
-        <PromoImages>
-          <ProjectImg src="images/huegasm-1.jpg" alt="Huegasm screenshot #1" />
-          <ProjectImg src="images/huegasm-2.jpg" alt="Huegasm screenshot #2" />
-          <ProjectImg src="images/huegasm-3.jpg" alt="Huegasm screenshot #3" />
-        </PromoImages>
+      <PromoImages>
+        <ProjectImg src="images/huegasm-1.jpg" alt="Huegasm screenshot #1" />
+        <ProjectImg src="images/huegasm-2.jpg" alt="Huegasm screenshot #2" />
+        <ProjectImg src="images/huegasm-3.jpg" alt="Huegasm screenshot #3" />
+      </PromoImages>
 
-        <IconContainer>
-          <a
-            href="https://chrome.google.com/webstore/detail/huegasm-for-philips-hue-l/mbjanbdhcpohhfecjgbdpcfhnnbofooj"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ChromeStoreIcon src="images/chrome-store-badge.png" title="Chrome extension" />
-          </a>
-        </IconContainer>
-      </ProjectContainer>
-    </Container>
-  );
-};
+      <IconContainer>
+        <a
+          href="https://chrome.google.com/webstore/detail/huegasm-for-philips-hue-l/mbjanbdhcpohhfecjgbdpcfhnnbofooj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ChromeStoreIcon
+            src="images/chrome-store-badge.png"
+            alt="Chrome store"
+            title="Chrome extension"
+          />
+        </a>
+      </IconContainer>
+    </ProjectContainer>
+  </Container>
+);
 
 const PageSubTitle = styled.h3`
   margin-bottom: ${({ theme }) => theme.spacing.mediumLarge};

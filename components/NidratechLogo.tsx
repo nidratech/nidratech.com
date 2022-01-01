@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-function NidratechLogo(props: SVGProps<SVGSVGElement>): JSX.Element {
+function NidratechLogo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg width={489} height={147} viewBox="0 0 489 147" {...props}>
       <image

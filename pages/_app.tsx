@@ -49,7 +49,13 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
           </PageTransition>
         </StyledMain>
 
-        <StyledFooter>Forged from 🔥 ©{year} Nidratech Ltd.</StyledFooter>
+        <StyledFooter>
+          Forged from{' '}
+          <span role="img" aria-label="hot fire burning">
+            🔥
+          </span>{' '}
+          ©{year} Nidratech Ltd.
+        </StyledFooter>
       </MainLayoutContainer>
     </ThemeProvider>
   );
