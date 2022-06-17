@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 
-import { Button, Container, PageTitle } from 'components';
+import Button from 'components/Button';
+import Container from 'components/Container';
+import PageTitle from 'components/PageTitle';
 
 const Contact: NextPage = () => {
   const [email, setEmail] = useState('');
@@ -78,11 +80,12 @@ const FormLabel = styled.label`
   margin-top: ${({ theme }) => theme.spacing.small};
 `;
 const MessageInput = styled.textarea`
-  ${formControl}
+  ${formControl};
+
   height: auto;
 `;
 const EmailInput = styled.input`
-  ${formControl}
+  ${formControl};
 `;
 const FormGroup = styled.div`
   display: grid;

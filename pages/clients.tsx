@@ -1,10 +1,10 @@
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
-import { NextPage } from 'next';
 
-import { Container, PageTitle } from 'components';
+import Container from 'components/Container';
+import PageTitle from 'components/PageTitle';
 
-const Clients: NextPage = () => (
+const Clients = () => (
   <Container>
     <NextSeo
       title="Clients | Nidratech"
@@ -180,7 +180,7 @@ const GClientLogo = styled(ClientLogo)`
 const ListGroupItem = styled.li`
   display: flex;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0 0 0 / 12.5%);
   padding: 0.75rem 1.25rem;
   margin-bottom: ${({ theme }) => theme.spacing.medium};
 `;

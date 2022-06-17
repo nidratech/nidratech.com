@@ -1,19 +1,17 @@
 import styled from 'styled-components';
 
-import { HighlightLine } from 'components';
+import HighlightLine from 'components/HighlightLine';
 
-interface Props {
+interface PageTitleProps {
   title: string;
 }
 
-function PageTitle({ title }: Props) {
-  return (
-    <TitleContainer>
-      <Title>{title}</Title>
-      <HighlightLine />
-    </TitleContainer>
-  );
-}
+const PageTitle = ({ title }: PageTitleProps) => (
+  <TitleContainer>
+    <Title>{title}</Title>
+    <HighlightLine />
+  </TitleContainer>
+);
 
 const Title = styled.h1`
   text-transform: uppercase;

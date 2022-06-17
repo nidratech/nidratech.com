@@ -7,7 +7,8 @@ import NextDocument, {
   DocumentInitialProps,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { AppType } from 'next/dist/shared/lib/utils';
+import { Fragment } from 'react';
+import type { AppType } from 'next/dist/shared/lib/utils';
 
 class Document extends NextDocument {
   // this is the key to making styled components reload properly in an SSR environment
@@ -26,12 +27,12 @@ class Document extends NextDocument {
 
       return {
         ...initialProps,
-        styles: (
-          <>
+        styles: [
+          <Fragment key={0}>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
-        ),
+          </Fragment>,
+        ],
       };
     } finally {
       sheet.seal();

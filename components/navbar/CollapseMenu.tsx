@@ -22,11 +22,11 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
 
   useEffect(() => {
     const menuToggle = document.querySelector('#menu-toggle');
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (
         isNavbarOpen &&
         !ref?.current.contains(event.target) &&
-        !menuToggle?.contains(event.target)
+        !menuToggle?.contains(event.target as Element)
       ) {
         setIsNavbarOpen(false);
       }

@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { AppProps } from 'next/app';
 import Router from 'next/router';
 import Head from 'next/head';
 import ReactGA from 'react-ga';
 import { PageTransition } from 'next-page-transitions';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
+import type { AppProps } from 'next/app';
 
-import { GlobalStyles, theme } from 'styles';
-import { Navbar } from 'components';
+import GlobalStyles from 'styles/GlobalStyles';
+import theme from 'styles/theme';
+import Navbar from 'components/Navbar';
 
 import '@fontsource/roboto';
 
@@ -22,7 +23,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   useEffect(() => {
-    ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TRACKING_ID as string);
+    ReactGA.initialize(process.env.NEXT_PUBLIC_GA_TRACKING_ID);
   }, []);
 
   return (

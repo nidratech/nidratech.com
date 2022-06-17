@@ -1,38 +1,37 @@
 import styled, { keyframes } from 'styled-components';
 import Link from 'next/link';
-import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 
-import { Button, HighlightLine } from 'components';
+import Button from 'components/Button';
+import HighlightLine from 'components/HighlightLine';
 
-const Home: NextPage = () => {
-  return (
-    <HomeContainer>
-      <NextSeo
-        title="Nidratech"
-        description="The company site of Nidratech."
-        canonical="https://www.nidratech.com"
-      />
+const Home = () => (
+  <HomeContainer>
+    <NextSeo
+      title="Nidratech"
+      description="The company site of Nidratech."
+      canonical="https://www.nidratech.com"
+    />
 
-      <PageTitleContainer>
-        <PageTitle>Web Consulting in Touch with Tomorrow</PageTitle>
+    <PageTitleContainer>
+      <PageTitle>Web Consulting in Touch with Tomorrow</PageTitle>
 
-        <HighlightLine />
-      </PageTitleContainer>
+      <HighlightLine />
+    </PageTitleContainer>
 
-      <PageSubTitle>
-        We bring ideas to life and create products that people love. <br />
-        Let us help you make something remarkable.
-      </PageSubTitle>
+    <PageSubTitle>
+      We bring ideas to life and create products that people love. <br />
+      Let us help you make something remarkable.
+    </PageSubTitle>
 
-      <Link href="/contact" passHref>
-        <Button type="button" as="a">
-          Contact
-        </Button>
-      </Link>
-    </HomeContainer>
-  );
-};
+    <Link href="/contact" passHref>
+      <Button type="button" as="a">
+        Contact
+      </Button>
+    </Link>
+  </HomeContainer>
+);
+
 const background = keyframes`
   0% {
     background-position: 0 0;
@@ -47,7 +46,7 @@ const PageTitleContainer = styled.div`
 `;
 const HomeContainer = styled.div`
   background-color: #292929;
-  background-image: url(images/hero-pattern.svg);
+  background-image: url('images/hero-pattern.svg');
   background-size: 100px 199px;
   animation: ${background} 3.5s linear infinite;
   color: ${({ theme }) => theme.colors.white};

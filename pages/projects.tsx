@@ -1,11 +1,11 @@
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { NextPage } from 'next';
 
-import { PageTitle, Container } from 'components';
+import PageTitle from 'components/PageTitle';
+import Container from 'components/Container';
 
-const Projects: NextPage = () => (
+const Projects = () => (
   <Container>
     <NextSeo
       title="Projects | Nidratech"
@@ -175,7 +175,7 @@ const IconContainer = styled.div`
   flex-flow: wrap;
 `;
 const ProjectContainer = styled.div`
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0 0 0 / 12.5%);
   padding: 0.75rem 1.25rem;
   margin-bottom: ${({ theme }) => theme.spacing.medium};
 `;
