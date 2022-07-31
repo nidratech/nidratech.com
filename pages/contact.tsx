@@ -23,7 +23,7 @@ const Contact: NextPage = () => {
 
       <PageTitle title="Got a project? We want to hear about it" />
 
-      <form action="https://formspree.io/contact@nidratech.com" method="POST">
+      <form action="https://formspree.io/f/xlevrjpj" method="POST">
         <FormGroup>
           <FormLabel htmlFor="email">Email</FormLabel>
           <EmailInput
@@ -43,8 +43,6 @@ const Contact: NextPage = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
         </FormGroup>
-
-        <input type="hidden" name="_next" value="https://www.nidratech.com/success" />
 
         <Button isDisabled={!isSubmitEnabled} type="submit">
           Submit
