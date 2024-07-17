@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
-import { PageTransition } from 'next-page-transitions';
+import { AnimatePresence } from 'framer-motion';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
@@ -35,9 +35,9 @@ const App: NextPage<AppProps> = ({ Component, pageProps, router }) => {
         <Navbar isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen} />
 
         <StyledMain>
-          <PageTransition timeout={200} classNames="page-transition" skipInitialTransition>
-            <Component {...pageProps} key={router.route} />
-          </PageTransition>
+          <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+            <Component key={router.asPath} {...pageProps} />
+          </AnimatePresence>
         </StyledMain>
 
         <StyledFooter>

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { useTransition, animated } from 'react-spring';
 import Link from 'next/link';
@@ -13,6 +13,7 @@ interface Props {
 const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
   const { pathname } = useRouter();
   const ref = useRef(null);
+  const closeNavbar = useCallback(() => setIsNavbarOpen(false), [setIsNavbarOpen]);
 
   const transition = useTransition(isNavbarOpen, {
     from: { position: 'absolute', opacity: 0 },
@@ -49,13 +50,14 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
             <CollapseWrapper ref={ref} style={style}>
               <NavLinks>
                 <li>
-                  <Link href="/" passHref>
+                  <Link href="/">
                     <NavItem
-                      href="/"
-                      as="a"
                       title="Home"
-                      onClick={() => setIsNavbarOpen(false)}
-                      isActive={pathname === '/'}
+                      onClick={closeNavbar}
+                      onKeyDown={closeNavbar}
+                      $isActive={pathname === '/'}
+                      role="button"
+                      tabIndex={0}
                     >
                       Home
                     </NavItem>
@@ -63,13 +65,14 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
                 </li>
 
                 <li>
-                  <Link href="/clients" passHref>
+                  <Link href="/clients">
                     <NavItem
-                      href="/clients"
-                      as="a"
                       title="Clients"
-                      onClick={() => setIsNavbarOpen(false)}
-                      isActive={pathname === '/clients'}
+                      onClick={closeNavbar}
+                      onKeyDown={closeNavbar}
+                      $isActive={pathname === '/clients'}
+                      role="button"
+                      tabIndex={0}
                     >
                       Clients
                     </NavItem>
@@ -77,13 +80,14 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
                 </li>
 
                 <li>
-                  <Link href="/projects" passHref>
+                  <Link href="/projects">
                     <NavItem
-                      href="/projects"
-                      as="a"
                       title="Projects"
-                      onClick={() => setIsNavbarOpen(false)}
-                      isActive={pathname === '/projects'}
+                      onClick={closeNavbar}
+                      onKeyDown={closeNavbar}
+                      $isActive={pathname === '/projects'}
+                      role="button"
+                      tabIndex={0}
                     >
                       Projects
                     </NavItem>
@@ -91,13 +95,14 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
                 </li>
 
                 <li>
-                  <Link href="/contact" passHref>
+                  <Link href="/contact">
                     <NavItem
-                      href="/contact"
-                      as="a"
                       title="Contact"
-                      onClick={() => setIsNavbarOpen(false)}
-                      isActive={pathname === '/contact'}
+                      onClick={closeNavbar}
+                      onKeyDown={closeNavbar}
+                      $isActive={pathname === '/contact'}
+                      role="button"
+                      tabIndex={0}
                     >
                       Contact
                     </NavItem>
@@ -105,22 +110,22 @@ const CollapseMenu = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
                 </li>
               </NavLinks>
             </CollapseWrapper>
-          )
+          ),
       )}
     </>
   );
 };
 
-const NavItem = styled.a<{ isActive?: boolean }>`
+const NavItem = styled.div<{ $isActive?: boolean }>`
   display: flex;
   padding: 0 ${({ theme }) => theme.spacing.medium};
-  color: ${({ isActive, theme }) => (isActive ? theme.colors.brand : theme.colors.grey)};
+  color: ${({ $isActive, theme }) => ($isActive ? theme.colors.brand : theme.colors.grey)};
   justify-content: center;
   min-width: 10vw;
 
   :hover {
-    color: ${({ isActive, theme }) =>
-      darken(0.05, isActive ? theme.colors.brand : theme.colors.grey)};
+    color: ${({ $isActive, theme }) =>
+      darken(0.05, $isActive ? theme.colors.brand : theme.colors.grey)};
   }
 `;
 const CollapseWrapper = styled(animated.div)`

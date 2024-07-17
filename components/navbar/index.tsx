@@ -19,50 +19,40 @@ const Navbar = ({ isNavbarOpen, setIsNavbarOpen }: Props) => {
     <>
       <NavBar>
         <FlexContainer>
-          <Link href="/" passHref>
-            <NavItem href="/" as="a" aria-label="Nidratech Ltd.">
+          <Link href="/">
+            <NavItem aria-label="Nidratech Ltd.">
               <StyledNidratechLogo />
             </NavItem>
           </Link>
 
           <NavLinks>
             <li>
-              <Link href="/" passHref>
-                <NavItem href="/" as="a" title="Home" isActive={pathname === '/'}>
+              <Link href="/">
+                <NavItem title="Home" $isActive={pathname === '/'}>
                   Home
                 </NavItem>
               </Link>
             </li>
 
             <li>
-              <Link href="/clients" passHref>
-                <NavItem href="/clients" as="a" title="Clients" isActive={pathname === '/clients'}>
+              <Link href="/clients">
+                <NavItem title="Clients" $isActive={pathname === '/clients'}>
                   Clients
                 </NavItem>
               </Link>
             </li>
 
             <li>
-              <Link href="/projects" passHref>
-                <NavItem
-                  href="/projects"
-                  as="a"
-                  title="Projects"
-                  isActive={pathname === '/projects'}
-                >
+              <Link href="/projects">
+                <NavItem title="Projects" $isActive={pathname === '/projects'}>
                   Projects
                 </NavItem>
               </Link>
             </li>
 
             <li>
-              <Link href="/contact" passHref>
-                <NavItem
-                  href="/contact"
-                  as="a"
-                  title="Contact us"
-                  isActive={pathname === '/contact'}
-                >
+              <Link href="/contact">
+                <NavItem title="Contact us" $isActive={pathname === '/contact'}>
                   Contact
                 </NavItem>
               </Link>
@@ -84,14 +74,14 @@ const StyledNidratechLogo = styled(NidratechLogo)`
   width: 9.5rem;
   height: 4rem;
 `;
-const NavItem = styled.a<{ isActive?: boolean }>`
+const NavItem = styled.div<{ $isActive?: boolean }>`
   display: flex;
   padding: 0 ${({ theme }) => theme.spacing.medium};
-  color: ${({ isActive, theme }) => (isActive ? theme.colors.brand : theme.colors.grey)};
+  color: ${({ $isActive, theme }) => ($isActive ? theme.colors.brand : theme.colors.grey)};
 
   :hover {
-    color: ${({ isActive, theme }) =>
-      darken(0.05, isActive ? theme.colors.brand : theme.colors.grey)};
+    color: ${({ $isActive, theme }) =>
+      darken(0.05, $isActive ? theme.colors.brand : theme.colors.grey)};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

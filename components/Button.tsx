@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode, Ref, MouseEvent } from 'react';
+import { forwardRef, type ReactNode, type Ref, type MouseEvent } from 'react';
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
@@ -13,7 +13,7 @@ interface Props {
 
 function Button(
   { children, onClick, isDisabled, isLoading, ...props }: Props,
-  ref: Ref<HTMLButtonElement>
+  ref: Ref<HTMLButtonElement>,
 ) {
   return (
     // @ts-ignore TODO improve typing
@@ -45,8 +45,11 @@ const StyledButton = styled.button`
   line-height: 1.5;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   :focus,
   :hover {

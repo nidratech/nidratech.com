@@ -6,11 +6,11 @@ import { COLOR_BRAND } from 'styles/theme';
 
 export const GlobalStyle = createGlobalStyle`  
   #__next {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   html, body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
   }
 
   a {

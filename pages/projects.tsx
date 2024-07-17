@@ -1,18 +1,11 @@
-import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
 import PageTitle from 'components/PageTitle';
-import Container from 'components/Container';
+import Layout from 'components/Layout';
 
 const Projects = () => (
-  <Container>
-    <NextSeo
-      title="Projects | Nidratech"
-      description="Past projects of Nidratech."
-      canonical="https://www.nidratech.com/projects"
-    />
-
+  <Layout title="Projects | Nidratech" description="Past projects of Nidratech.">
     <PageTitle title="What we've been up to lately" />
 
     <PageSubTitle>
@@ -95,7 +88,7 @@ const Projects = () => (
         </a>
       </IconContainer>
     </ProjectContainer>
-  </Container>
+  </Layout>
 );
 
 const PageSubTitle = styled.h3`
@@ -157,9 +150,7 @@ const PromoImages = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 12.5rem);
   grid-gap: ${({ theme }) => theme.spacing.small};
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
+  place-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;

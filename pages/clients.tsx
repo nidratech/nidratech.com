@@ -1,17 +1,10 @@
-import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 
-import Container from 'components/Container';
 import PageTitle from 'components/PageTitle';
+import Layout from 'components/Layout';
 
 const Clients = () => (
-  <Container>
-    <NextSeo
-      title="Clients | Nidratech"
-      description="Past clients of Nidratech."
-      canonical="https://www.nidratech.com/clients"
-    />
-
+  <Layout title="Clients | Nidratech" description="Past clients of Nidratech.">
     <PageTitle title="Some of our clients include" />
 
     <ul>
@@ -27,7 +20,7 @@ const Clients = () => (
           </a>
           <ClientAddress>Palo Alto, USA</ClientAddress>
           <p>We&apos;ve been contracting with Panasonic since 2020.</p>
-          <ProjectList>Projects: YoLabs</ProjectList>
+          <ProjectList>Projects: Yohana, PanasonicWELL</ProjectList>
         </ClientInfo>
       </ListGroupItem>
 
@@ -139,7 +132,7 @@ const Clients = () => (
         </ClientInfo>
       </ListGroupItem>
     </ul>
-  </Container>
+  </Layout>
 );
 
 const ClientAddress = styled.p`

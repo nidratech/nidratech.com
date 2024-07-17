@@ -1,18 +1,12 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
 
 import Button from 'components/Button';
 import HighlightLine from 'components/HighlightLine';
+import Layout from 'components/Layout';
 
 const Home = () => (
-  <HomeContainer>
-    <NextSeo
-      title="Nidratech"
-      description="The company site of Nidratech."
-      canonical="https://www.nidratech.com"
-    />
-
+  <Layout title="Nidratech" description="The company site of Nidratech." isHome>
     <PageTitleContainer>
       <PageTitle>Web Consulting in Touch with Tomorrow</PageTitle>
 
@@ -24,33 +18,14 @@ const Home = () => (
       Let us help you make something remarkable.
     </PageSubTitle>
 
-    <Link href="/contact" passHref>
-      <Button type="button" as="a">
-        Contact
-      </Button>
+    <Link href="/contact">
+      <Button type="button">Contact</Button>
     </Link>
-  </HomeContainer>
+  </Layout>
 );
 
-const background = keyframes`
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 0 199px;
-  }
-`;
 const PageTitleContainer = styled.div`
   display: inline-block;
-`;
-const HomeContainer = styled.div`
-  background-color: #292929;
-  background-image: url('images/hero-pattern.svg');
-  background-size: 100px 199px;
-  animation: ${background} 3.5s linear infinite;
-  color: ${({ theme }) => theme.colors.white};
-  padding: 10vh 3vw;
 `;
 const PageTitle = styled.h1`
   font-size: 2.5em;

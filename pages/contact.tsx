@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { NextSeo } from 'next-seo';
 import styled, { css } from 'styled-components';
 import { lighten } from 'polished';
 import type { NextPage } from 'next';
 
 import Button from 'components/Button';
-import Container from 'components/Container';
+import Layout from 'components/Layout';
 import PageTitle from 'components/PageTitle';
 
 const Contact: NextPage = () => {
@@ -14,13 +13,7 @@ const Contact: NextPage = () => {
   const isSubmitEnabled = email.length > 2 && message.length > 2;
 
   return (
-    <Container>
-      <NextSeo
-        title="Contact | Nidratech"
-        description="Contact form for Nidratech."
-        canonical="https://www.nidratech.com/contact"
-      />
-
+    <Layout title="Contact | Nidratech" description="Contact form for Nidratech.">
       <PageTitle title="Got a project? We want to hear about it" />
 
       <form action="https://formspree.io/f/xlevrjpj" method="POST">
@@ -48,7 +41,7 @@ const Contact: NextPage = () => {
           Submit
         </Button>
       </form>
-    </Container>
+    </Layout>
   );
 };
 
@@ -62,7 +55,9 @@ const formControl = css`
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   :focus {
     color: #495057;
